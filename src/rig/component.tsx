@@ -35,7 +35,6 @@ interface State {
   clientId: string;
   secret: string;
   version: string;
-  channelId: string;
   ownerName: string;
   extensionViews: RigExtensionView[],
   manifest: ExtensionManifest;
@@ -50,13 +49,14 @@ interface State {
 
 type Props = ReduxDispatchProps & ReduxStateProps;
 
+const defaultChannelId = `RIG${process.env.EXT_OWNER_NAME}`;
+
 export class RigComponent extends React.Component<Props, State> {
   public state: State = {
     apiHost: process.env.API_HOST || 'api.twitch.tv',
     clientId: process.env.EXT_CLIENT_ID,
     secret: process.env.EXT_SECRET,
     version: process.env.EXT_VERSION,
-    channelId: process.env.EXT_CHANNEL_ID || `RIG${process.env.EXT_OWNER_NAME}`,
     ownerName: process.env.EXT_OWNER_NAME,
     extensionViews: [],
     manifest: {} as ExtensionManifest,
@@ -229,7 +229,7 @@ export class RigComponent extends React.Component<Props, State> {
           openEditViewHandler={this.openEditViewHandler} />
         {this.state.showExtensionsView &&
           <ExtensionViewDialog
-            channelId={this.state.channelId}
+            channelId={defaultChannelId}
             extensionViews={this.state.manifest.views}
             show={this.state.showExtensionsView}
             closeHandler={this.closeExtensionViewDialog}

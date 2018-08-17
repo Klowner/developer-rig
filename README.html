@@ -98,7 +98,6 @@
 </ul>
 <p>Values for these fields need to be injected as environment variables to the Developer Rig at startup. The environment variables names are:</p>
 <ul>
-<li><code>EXT_CHANNEL</code></li>
 <li><code>EXT_CLIENT_ID</code></li>
 <li><code>EXT_SECRET</code></li>
 <li><code>EXT_OWNER_NAME</code></li>
@@ -106,7 +105,6 @@
 </ul>
 <p>If you don't want to set these values via environment variables, all but the extension secret can be set through a configuration file. This file is specified via a command line argument and is in the format of</p>
 <pre><code class="language-javascript">{
-  &quot;channel&quot;: &quot;&lt;channel name&gt;&quot;,
   &quot;clientID&quot;: &quot;&lt;client id&gt;&quot;,
   &quot;ownerName&quot;: &quot;&lt;owner name&gt;&quot;,
   &quot;version&quot;: &quot;&lt;version&gt;&quot;
@@ -116,10 +114,10 @@
 <p>Ensure that the <a href="#installing-dependencies">Developer Rig dependencies</a> are installed and <a href="#developer-rig-configuration">required configuration</a> is available.</p>
 <p>To start the rig with environment variables, run:</p>
 <pre><code class="language-bash">Mac:
-EXT_CHANNEL=&lt;channel name&gt; EXT_CLIENT_ID=&lt;client id&gt; EXT_SECRET=&lt;secret&gt; EXT_OWNER_NAME=&lt;owner name&gt; EXT_VERSION=&lt;version&gt; yarn start
+EXT_CLIENT_ID=&lt;client id&gt; EXT_SECRET=&lt;secret&gt; EXT_OWNER_NAME=&lt;owner name&gt; EXT_VERSION=&lt;version&gt; yarn start
 
 Windows:
-SET EXT_CHANNEL=&lt;channel name&gt; &amp; SET EXT_CLIENT_ID=&lt;client id&gt; &amp; SET EXT_SECRET=&lt;secret&gt; &amp; SET EXT_OWNER_NAME=&lt;owner name&gt; &amp; SET EXT_VERSION=&lt;version&gt; &amp; yarn start
+SET EXT_CLIENT_ID=&lt;client id&gt; &amp; SET EXT_SECRET=&lt;secret&gt; &amp; SET EXT_OWNER_NAME=&lt;owner name&gt; &amp; SET EXT_VERSION=&lt;version&gt; &amp; yarn start
 </code></pre>
 <p>To start the rig with a configuration file and command line arguments, run:</p>
 <pre><code class="language-bash">yarn start -s &lt;secret&gt; -c location/of/your/config
@@ -196,7 +194,6 @@ on the available options, run <code>yarn create-manifest -h</code> in a terminal
 window.  Note that you can edit the JSON file to make changes or
 adjustments.</p>
 <p>After having created a suitable manifest, you can launch the rig in local mode using <code>yarn start -l manifest.json</code></p>
-
 <h3 id="using-the-run-list-in-the-rig">Using the Run List in the Rig</h3>
 <p>The foundation of Local Mode is a JSON document called the &quot;Run List&quot;.  It provides developers the ability to trigger specific callback responses through the Extensions Helper Library. To your extension, it will appear like these have come from Twitch Extension APIs.</p>
 <p>When you get the Local Mode edition of the rig, it will contain a Run List pre-populated with mock responses.  You'll be able to alter these responses by directly editing the document.</p>
@@ -254,6 +251,10 @@ adjustments.</p>
 <p><em>What browsers and platforms are supported?</em></p>
 <blockquote>
 <p>We know the Developer Rig works in Chrome and Firefox on Mac and Windows. Feel free to help ensure it works in other browsers and platforms!</p>
+</blockquote>
+<p><em>What are the transparent purple zones in the Video Overlay view and the Component view?</em></p>
+<blockquote>
+<p>These are the areas where your extension cannot be interacted with due to Twitch Video Player elements. Please see <a href="https://dev.twitch.tv/docs/extensions/designing/#video-overlay-extensions">Desiging Extensions</a> for more details.</p>
 </blockquote>
 <h2 id="troubleshooting">Troubleshooting</h2>
 <p><em>The Extension I have specified is not appearing the Developer Rig.</em></p>
