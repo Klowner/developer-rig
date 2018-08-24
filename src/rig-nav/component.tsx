@@ -7,11 +7,8 @@ import { UserSession } from '../core/models/user-session';
 import { ExtensionManifest } from '../core/models/manifest';
 import './component.sass';
 import { MockApiDropdown } from './mock-api-dropdown';
-import * as gear from '../img/gear.svg';
 
 export interface PublicProps {
-  openProductManagementHandler: Function,
-  openConfigurationsHandler: Function,
   viewerHandler: Function,
   selectedView: string,
   error: string,
@@ -27,20 +24,24 @@ type Props = PublicProps & ReduxStateProps;
 
 export class RigNavComponent extends React.Component<Props> {
   private openProductManagementHandler = (): void => {
-    const { session, manifest, openProductManagementHandler } = this.props;
+    const { session, manifest, viewerHandler } = this.props;
     if ((session && session.login) && (manifest && manifest.bitsEnabled)) {
-      openProductManagementHandler();
+      viewerHandler(Labels.ProductManagement);
     }
   }
 
   public render() {
     const { session, manifest, selectedView } = this.props;
+    const projectOverviewClass = classNames({
+      'offset': true,
+      'top-nav-item': true,
+      'top-nav-item__selected': selectedView === Labels.ProjectOverview,
+    });
     const extensionViewsClass = classNames({
       'offset': true,
       'top-nav-item': true,
       'top-nav-item__selected': selectedView === Labels.ExtensionViews,
     });
-
     const productManagementClass = classNames({
       'top-nav-item': true,
       'top-nav-item__selected': selectedView === Labels.ProductManagement,
@@ -58,9 +59,6 @@ export class RigNavComponent extends React.Component<Props> {
         <div className='top-nav'>
           <div className='personal-bar'>
             <MockApiDropdown />
-            <div className='personal-bar__configurations' onClick={(event) => this.props.openConfigurationsHandler()} title='Configurations'>
-              <img src={gear} width={24} height={24} alt='Configurations' />
-            </div>
             {manifest && <div className='personal-bar__ext-name'>
               <span>{manifest.name}</span>
             </div>}
@@ -69,7 +67,10 @@ export class RigNavComponent extends React.Component<Props> {
             </div>
           </div>
           <div className='top-nav__item-container'>
-            <a className={extensionViewsClass} onClick={(event) => this.props.viewerHandler()}>
+            <a className={projectOverviewClass} onClick={(event) => this.props.viewerHandler(Labels.ProjectOverview)}>
+              Project Overview
+            </a>
+            <a className={extensionViewsClass} onClick={(event) => this.props.viewerHandler(Labels.ExtensionViews)}>
               Extension Views
             </a>
             <a className={productManagementClass} onClick={(event) => this.openProductManagementHandler()}>

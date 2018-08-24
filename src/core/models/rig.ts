@@ -4,6 +4,18 @@ import { RigRole } from '../../constants/rig';
 import { TokenSpec, createSignedToken } from '../../util/token';
 import { ViewerTypes } from '../../constants/viewer-types';
 
+export type RigProject = {
+  isLocal: boolean;
+  name: string;
+  projectFolderRoot: string;
+  extensionTypes: number;
+  manifest: ExtensionManifest;
+  ownerName: string;
+  clientId: string;
+  secret: string;
+  version: string;
+};
+
 export type RigExtensionView = {
   x: number;
   y: number;

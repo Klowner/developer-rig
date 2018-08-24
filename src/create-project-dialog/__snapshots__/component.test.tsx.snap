@@ -1,0 +1,2507 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProjectDialog /> renders correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ProjectDialog
+    closeHandler={[Function]}
+    isLocal={false}
+    saveHandler={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="project-dialog__background"
+/>,
+        <div
+          className="project-dialog__dialog"
+>
+          <div
+                    className="dialog__top-bar-container"
+          >
+                    <div
+                              className="top-bar-container__title"
+                    >
+                               
+                              Create 
+                               Project 
+                    </div>
+                    <div
+                              className="top-bar-container__escape"
+                              onClick={[Function]}
+                    >
+                              <img
+                                        alt="Close"
+                                        src="close_icon.png"
+                              />
+                    </div>
+          </div>
+          <hr
+                    className="dialog__divider"
+          />
+          <div
+                    className="project-dialog__content"
+          >
+                    <div
+                              className="project-dialog__state-value"
+                    >
+                              <label
+                                        className="state-value__label"
+                              >
+                                         Is Local 
+                              </label>
+                              <input
+                                        checked={false}
+                                        className="state-value__input"
+                                        name="isLocal"
+                                        onChange={[Function]}
+                                        type="checkbox"
+                              />
+                    </div>
+                    <div
+                              className="project-dialog__state-value"
+                    >
+                              <label
+                                        className="state-value__label"
+                              >
+                                         Name 
+                              </label>
+                              <input
+                                        className="state-value__input"
+                                        name="name"
+                                        onChange={[Function]}
+                                        type="text"
+                                        value=""
+                              />
+                    </div>
+                    <div
+                              className="project-dialog__state-value"
+                    >
+                              <label
+                                        className="state-value__label"
+                              >
+                                         Owner Name 
+                              </label>
+                              <input
+                                        className="state-value__input"
+                                        name="ownerName"
+                                        onChange={[Function]}
+                                        type="text"
+                                        value={undefined}
+                              />
+                    </div>
+                    <div
+                              className="project-dialog__state-value"
+                    >
+                              <label
+                                        className="state-value__label"
+                              >
+                                         Client ID 
+                              </label>
+                              <input
+                                        className="state-value__input"
+                                        name="clientId"
+                                        onChange={[Function]}
+                                        type="text"
+                                        value="test"
+                              />
+                    </div>
+                    <div
+                              className="project-dialog__state-value"
+                    >
+                              <label
+                                        className="state-value__label"
+                              >
+                                         Version 
+                              </label>
+                              <input
+                                        className="state-value__input"
+                                        name="version"
+                                        onChange={[Function]}
+                                        type="text"
+                                        value="test"
+                              />
+                    </div>
+                    <div
+                              className="project-dialog__state-value"
+                    >
+                              <label
+                                        className="state-value__label"
+                              >
+                                         Front-end Directory 
+                              </label>
+                              <input
+                                        className="state-value__input"
+                                        name="frontend"
+                                        onChange={[Function]}
+                                        type="text"
+                                        value=""
+                              />
+                    </div>
+                    <div
+                              className="project-dialog__state-value"
+                    >
+                              <label
+                                        className="state-value__label"
+                              >
+                                         Back-end File 
+                              </label>
+                              <input
+                                        className="state-value__input"
+                                        name="backend"
+                                        onChange={[Function]}
+                                        type="text"
+                                        value=""
+                              />
+                    </div>
+                    <div
+                              className="project-dialog__state-value"
+                    >
+                              <label
+                                        className="state-value__label"
+                              >
+                                         Secret 
+                              </label>
+                              <input
+                                        className="state-value__input"
+                                        name="secret"
+                                        onChange={[Function]}
+                                        type="text"
+                                        value="test"
+                              />
+                    </div>
+                    <div
+                              className="project-dialog__state-value"
+                    >
+                              <label
+                                        className="state-value__label"
+                              >
+                                         Manifest 
+                              </label>
+                              <textarea
+                                        className="state-value__input"
+                                        name="manifest"
+                                        onChange={[Function]}
+                                        value="{}"
+                              />
+                              <button
+                                        onClick={[Function]}
+                              >
+                                        Fetch
+                              </button>
+                    </div>
+          </div>
+          <hr
+                    className="dialog__divider"
+          />
+          <div
+                    className="dialog_bottom-bar"
+          >
+                    <div
+                              className="bottom-bar__save disabled"
+                              onClick={[Function]}
+                    >
+                               Save 
+                    </div>
+                    <div
+                              className="bottom-bar__cancel"
+                              onClick={[Function]}
+                    >
+                               Cancel 
+                    </div>
+          </div>
+</div>,
+      ],
+      "className": "project-dialog",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "project-dialog__background",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="dialog__top-bar-container"
+>
+              <div
+                            className="top-bar-container__title"
+              >
+                             
+                            Create 
+                             Project 
+              </div>
+              <div
+                            className="top-bar-container__escape"
+                            onClick={[Function]}
+              >
+                            <img
+                                          alt="Close"
+                                          src="close_icon.png"
+                            />
+              </div>
+</div>,
+            <hr
+              className="dialog__divider"
+/>,
+            <div
+              className="project-dialog__content"
+>
+              <div
+                            className="project-dialog__state-value"
+              >
+                            <label
+                                          className="state-value__label"
+                            >
+                                           Is Local 
+                            </label>
+                            <input
+                                          checked={false}
+                                          className="state-value__input"
+                                          name="isLocal"
+                                          onChange={[Function]}
+                                          type="checkbox"
+                            />
+              </div>
+              <div
+                            className="project-dialog__state-value"
+              >
+                            <label
+                                          className="state-value__label"
+                            >
+                                           Name 
+                            </label>
+                            <input
+                                          className="state-value__input"
+                                          name="name"
+                                          onChange={[Function]}
+                                          type="text"
+                                          value=""
+                            />
+              </div>
+              <div
+                            className="project-dialog__state-value"
+              >
+                            <label
+                                          className="state-value__label"
+                            >
+                                           Owner Name 
+                            </label>
+                            <input
+                                          className="state-value__input"
+                                          name="ownerName"
+                                          onChange={[Function]}
+                                          type="text"
+                                          value={undefined}
+                            />
+              </div>
+              <div
+                            className="project-dialog__state-value"
+              >
+                            <label
+                                          className="state-value__label"
+                            >
+                                           Client ID 
+                            </label>
+                            <input
+                                          className="state-value__input"
+                                          name="clientId"
+                                          onChange={[Function]}
+                                          type="text"
+                                          value="test"
+                            />
+              </div>
+              <div
+                            className="project-dialog__state-value"
+              >
+                            <label
+                                          className="state-value__label"
+                            >
+                                           Version 
+                            </label>
+                            <input
+                                          className="state-value__input"
+                                          name="version"
+                                          onChange={[Function]}
+                                          type="text"
+                                          value="test"
+                            />
+              </div>
+              <div
+                            className="project-dialog__state-value"
+              >
+                            <label
+                                          className="state-value__label"
+                            >
+                                           Front-end Directory 
+                            </label>
+                            <input
+                                          className="state-value__input"
+                                          name="frontend"
+                                          onChange={[Function]}
+                                          type="text"
+                                          value=""
+                            />
+              </div>
+              <div
+                            className="project-dialog__state-value"
+              >
+                            <label
+                                          className="state-value__label"
+                            >
+                                           Back-end File 
+                            </label>
+                            <input
+                                          className="state-value__input"
+                                          name="backend"
+                                          onChange={[Function]}
+                                          type="text"
+                                          value=""
+                            />
+              </div>
+              <div
+                            className="project-dialog__state-value"
+              >
+                            <label
+                                          className="state-value__label"
+                            >
+                                           Secret 
+                            </label>
+                            <input
+                                          className="state-value__input"
+                                          name="secret"
+                                          onChange={[Function]}
+                                          type="text"
+                                          value="test"
+                            />
+              </div>
+              <div
+                            className="project-dialog__state-value"
+              >
+                            <label
+                                          className="state-value__label"
+                            >
+                                           Manifest 
+                            </label>
+                            <textarea
+                                          className="state-value__input"
+                                          name="manifest"
+                                          onChange={[Function]}
+                                          value="{}"
+                            />
+                            <button
+                                          onClick={[Function]}
+                            >
+                                          Fetch
+                            </button>
+              </div>
+</div>,
+            <hr
+              className="dialog__divider"
+/>,
+            <div
+              className="dialog_bottom-bar"
+>
+              <div
+                            className="bottom-bar__save disabled"
+                            onClick={[Function]}
+              >
+                             Save 
+              </div>
+              <div
+                            className="bottom-bar__cancel"
+                            onClick={[Function]}
+              >
+                             Cancel 
+              </div>
+</div>,
+          ],
+          "className": "project-dialog__dialog",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="top-bar-container__title"
+>
+                   
+                  Create 
+                   Project 
+</div>,
+                <div
+                  className="top-bar-container__escape"
+                  onClick={[Function]}
+>
+                  <img
+                                    alt="Close"
+                                    src="close_icon.png"
+                  />
+</div>,
+              ],
+              "className": "dialog__top-bar-container",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    "Create ",
+                    " Project ",
+                  ],
+                  "className": "top-bar-container__title",
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  "Create ",
+                  " Project ",
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <img
+                    alt="Close"
+                    src="close_icon.png"
+/>,
+                  "className": "top-bar-container__escape",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "Close",
+                    "src": "close_icon.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "dialog__divider",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "hr",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="project-dialog__state-value"
+>
+                  <label
+                                    className="state-value__label"
+                  >
+                                     Is Local 
+                  </label>
+                  <input
+                                    checked={false}
+                                    className="state-value__input"
+                                    name="isLocal"
+                                    onChange={[Function]}
+                                    type="checkbox"
+                  />
+</div>,
+                <div
+                  className="project-dialog__state-value"
+>
+                  <label
+                                    className="state-value__label"
+                  >
+                                     Name 
+                  </label>
+                  <input
+                                    className="state-value__input"
+                                    name="name"
+                                    onChange={[Function]}
+                                    type="text"
+                                    value=""
+                  />
+</div>,
+                <div
+                  className="project-dialog__state-value"
+>
+                  <label
+                                    className="state-value__label"
+                  >
+                                     Owner Name 
+                  </label>
+                  <input
+                                    className="state-value__input"
+                                    name="ownerName"
+                                    onChange={[Function]}
+                                    type="text"
+                                    value={undefined}
+                  />
+</div>,
+                <div
+                  className="project-dialog__state-value"
+>
+                  <label
+                                    className="state-value__label"
+                  >
+                                     Client ID 
+                  </label>
+                  <input
+                                    className="state-value__input"
+                                    name="clientId"
+                                    onChange={[Function]}
+                                    type="text"
+                                    value="test"
+                  />
+</div>,
+                <div
+                  className="project-dialog__state-value"
+>
+                  <label
+                                    className="state-value__label"
+                  >
+                                     Version 
+                  </label>
+                  <input
+                                    className="state-value__input"
+                                    name="version"
+                                    onChange={[Function]}
+                                    type="text"
+                                    value="test"
+                  />
+</div>,
+                <div
+                  className="project-dialog__state-value"
+>
+                  <label
+                                    className="state-value__label"
+                  >
+                                     Front-end Directory 
+                  </label>
+                  <input
+                                    className="state-value__input"
+                                    name="frontend"
+                                    onChange={[Function]}
+                                    type="text"
+                                    value=""
+                  />
+</div>,
+                <div
+                  className="project-dialog__state-value"
+>
+                  <label
+                                    className="state-value__label"
+                  >
+                                     Back-end File 
+                  </label>
+                  <input
+                                    className="state-value__input"
+                                    name="backend"
+                                    onChange={[Function]}
+                                    type="text"
+                                    value=""
+                  />
+</div>,
+                <div
+                  className="project-dialog__state-value"
+>
+                  <label
+                                    className="state-value__label"
+                  >
+                                     Secret 
+                  </label>
+                  <input
+                                    className="state-value__input"
+                                    name="secret"
+                                    onChange={[Function]}
+                                    type="text"
+                                    value="test"
+                  />
+</div>,
+                <div
+                  className="project-dialog__state-value"
+>
+                  <label
+                                    className="state-value__label"
+                  >
+                                     Manifest 
+                  </label>
+                  <textarea
+                                    className="state-value__input"
+                                    name="manifest"
+                                    onChange={[Function]}
+                                    value="{}"
+                  />
+                  <button
+                                    onClick={[Function]}
+                  >
+                                    Fetch
+                  </button>
+</div>,
+              ],
+              "className": "project-dialog__content",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <label
+                      className="state-value__label"
+>
+                       Is Local 
+</label>,
+                    <input
+                      checked={false}
+                      className="state-value__input"
+                      name="isLocal"
+                      onChange={[Function]}
+                      type="checkbox"
+/>,
+                  ],
+                  "className": "project-dialog__state-value",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": " Is Local ",
+                      "className": "state-value__label",
+                    },
+                    "ref": null,
+                    "rendered": " Is Local ",
+                    "type": "label",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "checked": false,
+                      "className": "state-value__input",
+                      "name": "isLocal",
+                      "onChange": [Function],
+                      "type": "checkbox",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <label
+                      className="state-value__label"
+>
+                       Name 
+</label>,
+                    <input
+                      className="state-value__input"
+                      name="name"
+                      onChange={[Function]}
+                      type="text"
+                      value=""
+/>,
+                  ],
+                  "className": "project-dialog__state-value",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": " Name ",
+                      "className": "state-value__label",
+                    },
+                    "ref": null,
+                    "rendered": " Name ",
+                    "type": "label",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "state-value__input",
+                      "name": "name",
+                      "onChange": [Function],
+                      "type": "text",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <label
+                      className="state-value__label"
+>
+                       Owner Name 
+</label>,
+                    <input
+                      className="state-value__input"
+                      name="ownerName"
+                      onChange={[Function]}
+                      type="text"
+                      value={undefined}
+/>,
+                  ],
+                  "className": "project-dialog__state-value",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": " Owner Name ",
+                      "className": "state-value__label",
+                    },
+                    "ref": null,
+                    "rendered": " Owner Name ",
+                    "type": "label",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "state-value__input",
+                      "name": "ownerName",
+                      "onChange": [Function],
+                      "type": "text",
+                      "value": undefined,
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <label
+                      className="state-value__label"
+>
+                       Client ID 
+</label>,
+                    <input
+                      className="state-value__input"
+                      name="clientId"
+                      onChange={[Function]}
+                      type="text"
+                      value="test"
+/>,
+                  ],
+                  "className": "project-dialog__state-value",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": " Client ID ",
+                      "className": "state-value__label",
+                    },
+                    "ref": null,
+                    "rendered": " Client ID ",
+                    "type": "label",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "state-value__input",
+                      "name": "clientId",
+                      "onChange": [Function],
+                      "type": "text",
+                      "value": "test",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <label
+                      className="state-value__label"
+>
+                       Version 
+</label>,
+                    <input
+                      className="state-value__input"
+                      name="version"
+                      onChange={[Function]}
+                      type="text"
+                      value="test"
+/>,
+                  ],
+                  "className": "project-dialog__state-value",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": " Version ",
+                      "className": "state-value__label",
+                    },
+                    "ref": null,
+                    "rendered": " Version ",
+                    "type": "label",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "state-value__input",
+                      "name": "version",
+                      "onChange": [Function],
+                      "type": "text",
+                      "value": "test",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <label
+                      className="state-value__label"
+>
+                       Front-end Directory 
+</label>,
+                    <input
+                      className="state-value__input"
+                      name="frontend"
+                      onChange={[Function]}
+                      type="text"
+                      value=""
+/>,
+                  ],
+                  "className": "project-dialog__state-value",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": " Front-end Directory ",
+                      "className": "state-value__label",
+                    },
+                    "ref": null,
+                    "rendered": " Front-end Directory ",
+                    "type": "label",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "state-value__input",
+                      "name": "frontend",
+                      "onChange": [Function],
+                      "type": "text",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <label
+                      className="state-value__label"
+>
+                       Back-end File 
+</label>,
+                    <input
+                      className="state-value__input"
+                      name="backend"
+                      onChange={[Function]}
+                      type="text"
+                      value=""
+/>,
+                  ],
+                  "className": "project-dialog__state-value",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": " Back-end File ",
+                      "className": "state-value__label",
+                    },
+                    "ref": null,
+                    "rendered": " Back-end File ",
+                    "type": "label",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "state-value__input",
+                      "name": "backend",
+                      "onChange": [Function],
+                      "type": "text",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <label
+                      className="state-value__label"
+>
+                       Secret 
+</label>,
+                    <input
+                      className="state-value__input"
+                      name="secret"
+                      onChange={[Function]}
+                      type="text"
+                      value="test"
+/>,
+                  ],
+                  "className": "project-dialog__state-value",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": " Secret ",
+                      "className": "state-value__label",
+                    },
+                    "ref": null,
+                    "rendered": " Secret ",
+                    "type": "label",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "state-value__input",
+                      "name": "secret",
+                      "onChange": [Function],
+                      "type": "text",
+                      "value": "test",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <label
+                      className="state-value__label"
+>
+                       Manifest 
+</label>,
+                    <textarea
+                      className="state-value__input"
+                      name="manifest"
+                      onChange={[Function]}
+                      value="{}"
+/>,
+                    <button
+                      onClick={[Function]}
+>
+                      Fetch
+</button>,
+                  ],
+                  "className": "project-dialog__state-value",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": " Manifest ",
+                      "className": "state-value__label",
+                    },
+                    "ref": null,
+                    "rendered": " Manifest ",
+                    "type": "label",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "state-value__input",
+                      "name": "manifest",
+                      "onChange": [Function],
+                      "value": "{}",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "textarea",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Fetch",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "Fetch",
+                    "type": "button",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "dialog__divider",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "hr",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="bottom-bar__save disabled"
+                  onClick={[Function]}
+>
+                   Save 
+</div>,
+                <div
+                  className="bottom-bar__cancel"
+                  onClick={[Function]}
+>
+                   Cancel 
+</div>,
+              ],
+              "className": "dialog_bottom-bar",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": " Save ",
+                  "className": "bottom-bar__save disabled",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": " Save ",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": " Cancel ",
+                  "className": "bottom-bar__cancel",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": " Cancel ",
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="project-dialog__background"
+/>,
+          <div
+            className="project-dialog__dialog"
+>
+            <div
+                        className="dialog__top-bar-container"
+            >
+                        <div
+                                    className="top-bar-container__title"
+                        >
+                                     
+                                    Create 
+                                     Project 
+                        </div>
+                        <div
+                                    className="top-bar-container__escape"
+                                    onClick={[Function]}
+                        >
+                                    <img
+                                                alt="Close"
+                                                src="close_icon.png"
+                                    />
+                        </div>
+            </div>
+            <hr
+                        className="dialog__divider"
+            />
+            <div
+                        className="project-dialog__content"
+            >
+                        <div
+                                    className="project-dialog__state-value"
+                        >
+                                    <label
+                                                className="state-value__label"
+                                    >
+                                                 Is Local 
+                                    </label>
+                                    <input
+                                                checked={false}
+                                                className="state-value__input"
+                                                name="isLocal"
+                                                onChange={[Function]}
+                                                type="checkbox"
+                                    />
+                        </div>
+                        <div
+                                    className="project-dialog__state-value"
+                        >
+                                    <label
+                                                className="state-value__label"
+                                    >
+                                                 Name 
+                                    </label>
+                                    <input
+                                                className="state-value__input"
+                                                name="name"
+                                                onChange={[Function]}
+                                                type="text"
+                                                value=""
+                                    />
+                        </div>
+                        <div
+                                    className="project-dialog__state-value"
+                        >
+                                    <label
+                                                className="state-value__label"
+                                    >
+                                                 Owner Name 
+                                    </label>
+                                    <input
+                                                className="state-value__input"
+                                                name="ownerName"
+                                                onChange={[Function]}
+                                                type="text"
+                                                value={undefined}
+                                    />
+                        </div>
+                        <div
+                                    className="project-dialog__state-value"
+                        >
+                                    <label
+                                                className="state-value__label"
+                                    >
+                                                 Client ID 
+                                    </label>
+                                    <input
+                                                className="state-value__input"
+                                                name="clientId"
+                                                onChange={[Function]}
+                                                type="text"
+                                                value="test"
+                                    />
+                        </div>
+                        <div
+                                    className="project-dialog__state-value"
+                        >
+                                    <label
+                                                className="state-value__label"
+                                    >
+                                                 Version 
+                                    </label>
+                                    <input
+                                                className="state-value__input"
+                                                name="version"
+                                                onChange={[Function]}
+                                                type="text"
+                                                value="test"
+                                    />
+                        </div>
+                        <div
+                                    className="project-dialog__state-value"
+                        >
+                                    <label
+                                                className="state-value__label"
+                                    >
+                                                 Front-end Directory 
+                                    </label>
+                                    <input
+                                                className="state-value__input"
+                                                name="frontend"
+                                                onChange={[Function]}
+                                                type="text"
+                                                value=""
+                                    />
+                        </div>
+                        <div
+                                    className="project-dialog__state-value"
+                        >
+                                    <label
+                                                className="state-value__label"
+                                    >
+                                                 Back-end File 
+                                    </label>
+                                    <input
+                                                className="state-value__input"
+                                                name="backend"
+                                                onChange={[Function]}
+                                                type="text"
+                                                value=""
+                                    />
+                        </div>
+                        <div
+                                    className="project-dialog__state-value"
+                        >
+                                    <label
+                                                className="state-value__label"
+                                    >
+                                                 Secret 
+                                    </label>
+                                    <input
+                                                className="state-value__input"
+                                                name="secret"
+                                                onChange={[Function]}
+                                                type="text"
+                                                value="test"
+                                    />
+                        </div>
+                        <div
+                                    className="project-dialog__state-value"
+                        >
+                                    <label
+                                                className="state-value__label"
+                                    >
+                                                 Manifest 
+                                    </label>
+                                    <textarea
+                                                className="state-value__input"
+                                                name="manifest"
+                                                onChange={[Function]}
+                                                value="{}"
+                                    />
+                                    <button
+                                                onClick={[Function]}
+                                    >
+                                                Fetch
+                                    </button>
+                        </div>
+            </div>
+            <hr
+                        className="dialog__divider"
+            />
+            <div
+                        className="dialog_bottom-bar"
+            >
+                        <div
+                                    className="bottom-bar__save disabled"
+                                    onClick={[Function]}
+                        >
+                                     Save 
+                        </div>
+                        <div
+                                    className="bottom-bar__cancel"
+                                    onClick={[Function]}
+                        >
+                                     Cancel 
+                        </div>
+            </div>
+</div>,
+        ],
+        "className": "project-dialog",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "project-dialog__background",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="dialog__top-bar-container"
+>
+                <div
+                                className="top-bar-container__title"
+                >
+                                 
+                                Create 
+                                 Project 
+                </div>
+                <div
+                                className="top-bar-container__escape"
+                                onClick={[Function]}
+                >
+                                <img
+                                                alt="Close"
+                                                src="close_icon.png"
+                                />
+                </div>
+</div>,
+              <hr
+                className="dialog__divider"
+/>,
+              <div
+                className="project-dialog__content"
+>
+                <div
+                                className="project-dialog__state-value"
+                >
+                                <label
+                                                className="state-value__label"
+                                >
+                                                 Is Local 
+                                </label>
+                                <input
+                                                checked={false}
+                                                className="state-value__input"
+                                                name="isLocal"
+                                                onChange={[Function]}
+                                                type="checkbox"
+                                />
+                </div>
+                <div
+                                className="project-dialog__state-value"
+                >
+                                <label
+                                                className="state-value__label"
+                                >
+                                                 Name 
+                                </label>
+                                <input
+                                                className="state-value__input"
+                                                name="name"
+                                                onChange={[Function]}
+                                                type="text"
+                                                value=""
+                                />
+                </div>
+                <div
+                                className="project-dialog__state-value"
+                >
+                                <label
+                                                className="state-value__label"
+                                >
+                                                 Owner Name 
+                                </label>
+                                <input
+                                                className="state-value__input"
+                                                name="ownerName"
+                                                onChange={[Function]}
+                                                type="text"
+                                                value={undefined}
+                                />
+                </div>
+                <div
+                                className="project-dialog__state-value"
+                >
+                                <label
+                                                className="state-value__label"
+                                >
+                                                 Client ID 
+                                </label>
+                                <input
+                                                className="state-value__input"
+                                                name="clientId"
+                                                onChange={[Function]}
+                                                type="text"
+                                                value="test"
+                                />
+                </div>
+                <div
+                                className="project-dialog__state-value"
+                >
+                                <label
+                                                className="state-value__label"
+                                >
+                                                 Version 
+                                </label>
+                                <input
+                                                className="state-value__input"
+                                                name="version"
+                                                onChange={[Function]}
+                                                type="text"
+                                                value="test"
+                                />
+                </div>
+                <div
+                                className="project-dialog__state-value"
+                >
+                                <label
+                                                className="state-value__label"
+                                >
+                                                 Front-end Directory 
+                                </label>
+                                <input
+                                                className="state-value__input"
+                                                name="frontend"
+                                                onChange={[Function]}
+                                                type="text"
+                                                value=""
+                                />
+                </div>
+                <div
+                                className="project-dialog__state-value"
+                >
+                                <label
+                                                className="state-value__label"
+                                >
+                                                 Back-end File 
+                                </label>
+                                <input
+                                                className="state-value__input"
+                                                name="backend"
+                                                onChange={[Function]}
+                                                type="text"
+                                                value=""
+                                />
+                </div>
+                <div
+                                className="project-dialog__state-value"
+                >
+                                <label
+                                                className="state-value__label"
+                                >
+                                                 Secret 
+                                </label>
+                                <input
+                                                className="state-value__input"
+                                                name="secret"
+                                                onChange={[Function]}
+                                                type="text"
+                                                value="test"
+                                />
+                </div>
+                <div
+                                className="project-dialog__state-value"
+                >
+                                <label
+                                                className="state-value__label"
+                                >
+                                                 Manifest 
+                                </label>
+                                <textarea
+                                                className="state-value__input"
+                                                name="manifest"
+                                                onChange={[Function]}
+                                                value="{}"
+                                />
+                                <button
+                                                onClick={[Function]}
+                                >
+                                                Fetch
+                                </button>
+                </div>
+</div>,
+              <hr
+                className="dialog__divider"
+/>,
+              <div
+                className="dialog_bottom-bar"
+>
+                <div
+                                className="bottom-bar__save disabled"
+                                onClick={[Function]}
+                >
+                                 Save 
+                </div>
+                <div
+                                className="bottom-bar__cancel"
+                                onClick={[Function]}
+                >
+                                 Cancel 
+                </div>
+</div>,
+            ],
+            "className": "project-dialog__dialog",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="top-bar-container__title"
+>
+                     
+                    Create 
+                     Project 
+</div>,
+                  <div
+                    className="top-bar-container__escape"
+                    onClick={[Function]}
+>
+                    <img
+                                        alt="Close"
+                                        src="close_icon.png"
+                    />
+</div>,
+                ],
+                "className": "dialog__top-bar-container",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      "Create ",
+                      " Project ",
+                    ],
+                    "className": "top-bar-container__title",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    "Create ",
+                    " Project ",
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <img
+                      alt="Close"
+                      src="close_icon.png"
+/>,
+                    "className": "top-bar-container__escape",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "Close",
+                      "src": "close_icon.png",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "dialog__divider",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "hr",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="project-dialog__state-value"
+>
+                    <label
+                                        className="state-value__label"
+                    >
+                                         Is Local 
+                    </label>
+                    <input
+                                        checked={false}
+                                        className="state-value__input"
+                                        name="isLocal"
+                                        onChange={[Function]}
+                                        type="checkbox"
+                    />
+</div>,
+                  <div
+                    className="project-dialog__state-value"
+>
+                    <label
+                                        className="state-value__label"
+                    >
+                                         Name 
+                    </label>
+                    <input
+                                        className="state-value__input"
+                                        name="name"
+                                        onChange={[Function]}
+                                        type="text"
+                                        value=""
+                    />
+</div>,
+                  <div
+                    className="project-dialog__state-value"
+>
+                    <label
+                                        className="state-value__label"
+                    >
+                                         Owner Name 
+                    </label>
+                    <input
+                                        className="state-value__input"
+                                        name="ownerName"
+                                        onChange={[Function]}
+                                        type="text"
+                                        value={undefined}
+                    />
+</div>,
+                  <div
+                    className="project-dialog__state-value"
+>
+                    <label
+                                        className="state-value__label"
+                    >
+                                         Client ID 
+                    </label>
+                    <input
+                                        className="state-value__input"
+                                        name="clientId"
+                                        onChange={[Function]}
+                                        type="text"
+                                        value="test"
+                    />
+</div>,
+                  <div
+                    className="project-dialog__state-value"
+>
+                    <label
+                                        className="state-value__label"
+                    >
+                                         Version 
+                    </label>
+                    <input
+                                        className="state-value__input"
+                                        name="version"
+                                        onChange={[Function]}
+                                        type="text"
+                                        value="test"
+                    />
+</div>,
+                  <div
+                    className="project-dialog__state-value"
+>
+                    <label
+                                        className="state-value__label"
+                    >
+                                         Front-end Directory 
+                    </label>
+                    <input
+                                        className="state-value__input"
+                                        name="frontend"
+                                        onChange={[Function]}
+                                        type="text"
+                                        value=""
+                    />
+</div>,
+                  <div
+                    className="project-dialog__state-value"
+>
+                    <label
+                                        className="state-value__label"
+                    >
+                                         Back-end File 
+                    </label>
+                    <input
+                                        className="state-value__input"
+                                        name="backend"
+                                        onChange={[Function]}
+                                        type="text"
+                                        value=""
+                    />
+</div>,
+                  <div
+                    className="project-dialog__state-value"
+>
+                    <label
+                                        className="state-value__label"
+                    >
+                                         Secret 
+                    </label>
+                    <input
+                                        className="state-value__input"
+                                        name="secret"
+                                        onChange={[Function]}
+                                        type="text"
+                                        value="test"
+                    />
+</div>,
+                  <div
+                    className="project-dialog__state-value"
+>
+                    <label
+                                        className="state-value__label"
+                    >
+                                         Manifest 
+                    </label>
+                    <textarea
+                                        className="state-value__input"
+                                        name="manifest"
+                                        onChange={[Function]}
+                                        value="{}"
+                    />
+                    <button
+                                        onClick={[Function]}
+                    >
+                                        Fetch
+                    </button>
+</div>,
+                ],
+                "className": "project-dialog__content",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <label
+                        className="state-value__label"
+>
+                         Is Local 
+</label>,
+                      <input
+                        checked={false}
+                        className="state-value__input"
+                        name="isLocal"
+                        onChange={[Function]}
+                        type="checkbox"
+/>,
+                    ],
+                    "className": "project-dialog__state-value",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": " Is Local ",
+                        "className": "state-value__label",
+                      },
+                      "ref": null,
+                      "rendered": " Is Local ",
+                      "type": "label",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "checked": false,
+                        "className": "state-value__input",
+                        "name": "isLocal",
+                        "onChange": [Function],
+                        "type": "checkbox",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <label
+                        className="state-value__label"
+>
+                         Name 
+</label>,
+                      <input
+                        className="state-value__input"
+                        name="name"
+                        onChange={[Function]}
+                        type="text"
+                        value=""
+/>,
+                    ],
+                    "className": "project-dialog__state-value",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": " Name ",
+                        "className": "state-value__label",
+                      },
+                      "ref": null,
+                      "rendered": " Name ",
+                      "type": "label",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "state-value__input",
+                        "name": "name",
+                        "onChange": [Function],
+                        "type": "text",
+                        "value": "",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <label
+                        className="state-value__label"
+>
+                         Owner Name 
+</label>,
+                      <input
+                        className="state-value__input"
+                        name="ownerName"
+                        onChange={[Function]}
+                        type="text"
+                        value={undefined}
+/>,
+                    ],
+                    "className": "project-dialog__state-value",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": " Owner Name ",
+                        "className": "state-value__label",
+                      },
+                      "ref": null,
+                      "rendered": " Owner Name ",
+                      "type": "label",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "state-value__input",
+                        "name": "ownerName",
+                        "onChange": [Function],
+                        "type": "text",
+                        "value": undefined,
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <label
+                        className="state-value__label"
+>
+                         Client ID 
+</label>,
+                      <input
+                        className="state-value__input"
+                        name="clientId"
+                        onChange={[Function]}
+                        type="text"
+                        value="test"
+/>,
+                    ],
+                    "className": "project-dialog__state-value",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": " Client ID ",
+                        "className": "state-value__label",
+                      },
+                      "ref": null,
+                      "rendered": " Client ID ",
+                      "type": "label",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "state-value__input",
+                        "name": "clientId",
+                        "onChange": [Function],
+                        "type": "text",
+                        "value": "test",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <label
+                        className="state-value__label"
+>
+                         Version 
+</label>,
+                      <input
+                        className="state-value__input"
+                        name="version"
+                        onChange={[Function]}
+                        type="text"
+                        value="test"
+/>,
+                    ],
+                    "className": "project-dialog__state-value",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": " Version ",
+                        "className": "state-value__label",
+                      },
+                      "ref": null,
+                      "rendered": " Version ",
+                      "type": "label",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "state-value__input",
+                        "name": "version",
+                        "onChange": [Function],
+                        "type": "text",
+                        "value": "test",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <label
+                        className="state-value__label"
+>
+                         Front-end Directory 
+</label>,
+                      <input
+                        className="state-value__input"
+                        name="frontend"
+                        onChange={[Function]}
+                        type="text"
+                        value=""
+/>,
+                    ],
+                    "className": "project-dialog__state-value",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": " Front-end Directory ",
+                        "className": "state-value__label",
+                      },
+                      "ref": null,
+                      "rendered": " Front-end Directory ",
+                      "type": "label",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "state-value__input",
+                        "name": "frontend",
+                        "onChange": [Function],
+                        "type": "text",
+                        "value": "",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <label
+                        className="state-value__label"
+>
+                         Back-end File 
+</label>,
+                      <input
+                        className="state-value__input"
+                        name="backend"
+                        onChange={[Function]}
+                        type="text"
+                        value=""
+/>,
+                    ],
+                    "className": "project-dialog__state-value",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": " Back-end File ",
+                        "className": "state-value__label",
+                      },
+                      "ref": null,
+                      "rendered": " Back-end File ",
+                      "type": "label",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "state-value__input",
+                        "name": "backend",
+                        "onChange": [Function],
+                        "type": "text",
+                        "value": "",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <label
+                        className="state-value__label"
+>
+                         Secret 
+</label>,
+                      <input
+                        className="state-value__input"
+                        name="secret"
+                        onChange={[Function]}
+                        type="text"
+                        value="test"
+/>,
+                    ],
+                    "className": "project-dialog__state-value",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": " Secret ",
+                        "className": "state-value__label",
+                      },
+                      "ref": null,
+                      "rendered": " Secret ",
+                      "type": "label",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "state-value__input",
+                        "name": "secret",
+                        "onChange": [Function],
+                        "type": "text",
+                        "value": "test",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <label
+                        className="state-value__label"
+>
+                         Manifest 
+</label>,
+                      <textarea
+                        className="state-value__input"
+                        name="manifest"
+                        onChange={[Function]}
+                        value="{}"
+/>,
+                      <button
+                        onClick={[Function]}
+>
+                        Fetch
+</button>,
+                    ],
+                    "className": "project-dialog__state-value",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": " Manifest ",
+                        "className": "state-value__label",
+                      },
+                      "ref": null,
+                      "rendered": " Manifest ",
+                      "type": "label",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "state-value__input",
+                        "name": "manifest",
+                        "onChange": [Function],
+                        "value": "{}",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "textarea",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Fetch",
+                        "onClick": [Function],
+                      },
+                      "ref": null,
+                      "rendered": "Fetch",
+                      "type": "button",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "dialog__divider",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "hr",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="bottom-bar__save disabled"
+                    onClick={[Function]}
+>
+                     Save 
+</div>,
+                  <div
+                    className="bottom-bar__cancel"
+                    onClick={[Function]}
+>
+                     Cancel 
+</div>,
+                ],
+                "className": "dialog_bottom-bar",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": " Save ",
+                    "className": "bottom-bar__save disabled",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": " Save ",
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": " Cancel ",
+                    "className": "bottom-bar__cancel",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": " Cancel ",
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

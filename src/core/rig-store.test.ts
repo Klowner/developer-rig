@@ -9,7 +9,6 @@ describe('RigStore', () => {
         mockApi: false,
       },
       session: {},
-      extensions: {},
       products: {
         products: [],
         error: '',

@@ -4,10 +4,7 @@ exports[`<RigComponent /> renders correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <RigComponent
-    saveManifest={[Function]}
-    userLogin={[Function]}
-/>,
+  Symbol(enzyme.__unrendered__): <RigComponent />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -23,20 +20,38 @@ ShallowWrapper {
       "children": Array [
         <Connect(RigNavComponent)
           error={undefined}
-          openConfigurationsHandler={[Function]}
-          openProductManagementHandler={[Function]}
-          selectedView="Extension Views"
+          selectedView="Project Overview"
           viewerHandler={[Function]}
 />,
         <div>
-          <ExtensionViewContainer
-                    deleteExtensionViewHandler={[Function]}
-                    extensionViews={Array []}
-                    openEditViewHandler={[Function]}
-                    openExtensionViewHandler={[Function]}
+          <ProjectView
+                    backend={undefined}
+                    clientId={undefined}
+                    edit={[Function]}
+                    frontend={undefined}
+                    isLocal={true}
+                    manifest={undefined}
+                    name={undefined}
+                    ownerName={undefined}
+                    secret={undefined}
+                    version={undefined}
+          />
+          <ProjectDialog
+                    backend={undefined}
+                    clientId={undefined}
+                    closeHandler={[Function]}
+                    frontend={undefined}
+                    isEdit={false}
+                    isLocal={true}
+                    manifest={undefined}
+                    mustSave={true}
+                    name={undefined}
+                    ownerName="test"
+                    saveHandler={[Function]}
+                    secret={undefined}
+                    version={undefined}
           />
           <SignInDialog />
-          <Console />
 </div>,
       ],
       "className": "rig-container",
@@ -49,9 +64,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "error": undefined,
-          "openConfigurationsHandler": [Function],
-          "openProductManagementHandler": [Function],
-          "selectedView": "Extension Views",
+          "selectedView": "Project Overview",
           "viewerHandler": [Function],
         },
         "ref": null,
@@ -64,17 +77,34 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <ExtensionViewContainer
-              deleteExtensionViewHandler={[Function]}
-              extensionViews={Array []}
-              openEditViewHandler={[Function]}
-              openExtensionViewHandler={[Function]}
+            <ProjectView
+              backend={undefined}
+              clientId={undefined}
+              edit={[Function]}
+              frontend={undefined}
+              isLocal={true}
+              manifest={undefined}
+              name={undefined}
+              ownerName={undefined}
+              secret={undefined}
+              version={undefined}
 />,
-            false,
-            false,
-            false,
+            <ProjectDialog
+              backend={undefined}
+              clientId={undefined}
+              closeHandler={[Function]}
+              frontend={undefined}
+              isEdit={false}
+              isLocal={true}
+              manifest={undefined}
+              mustSave={true}
+              name={undefined}
+              ownerName="test"
+              saveHandler={[Function]}
+              secret={undefined}
+              version={undefined}
+/>,
             <SignInDialog />,
-            <Console />,
           ],
         },
         "ref": null,
@@ -84,23 +114,40 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "deleteExtensionViewHandler": [Function],
-              "extensionViews": Array [],
-              "openEditViewHandler": [Function],
-              "openExtensionViewHandler": [Function],
+              "backend": undefined,
+              "clientId": undefined,
+              "edit": [Function],
+              "frontend": undefined,
+              "isLocal": true,
+              "manifest": undefined,
+              "name": undefined,
+              "ownerName": undefined,
+              "secret": undefined,
+              "version": undefined,
             },
             "ref": null,
             "rendered": null,
             "type": [Function],
           },
-          false,
-          false,
-          false,
           Object {
             "instance": null,
             "key": undefined,
             "nodeType": "class",
-            "props": Object {},
+            "props": Object {
+              "backend": undefined,
+              "clientId": undefined,
+              "closeHandler": [Function],
+              "frontend": undefined,
+              "isEdit": false,
+              "isLocal": true,
+              "manifest": undefined,
+              "mustSave": true,
+              "name": undefined,
+              "ownerName": "test",
+              "saveHandler": [Function],
+              "secret": undefined,
+              "version": undefined,
+            },
             "ref": null,
             "rendered": null,
             "type": [Function],
@@ -129,20 +176,38 @@ ShallowWrapper {
         "children": Array [
           <Connect(RigNavComponent)
             error={undefined}
-            openConfigurationsHandler={[Function]}
-            openProductManagementHandler={[Function]}
-            selectedView="Extension Views"
+            selectedView="Project Overview"
             viewerHandler={[Function]}
 />,
           <div>
-            <ExtensionViewContainer
-                        deleteExtensionViewHandler={[Function]}
-                        extensionViews={Array []}
-                        openEditViewHandler={[Function]}
-                        openExtensionViewHandler={[Function]}
+            <ProjectView
+                        backend={undefined}
+                        clientId={undefined}
+                        edit={[Function]}
+                        frontend={undefined}
+                        isLocal={true}
+                        manifest={undefined}
+                        name={undefined}
+                        ownerName={undefined}
+                        secret={undefined}
+                        version={undefined}
+            />
+            <ProjectDialog
+                        backend={undefined}
+                        clientId={undefined}
+                        closeHandler={[Function]}
+                        frontend={undefined}
+                        isEdit={false}
+                        isLocal={true}
+                        manifest={undefined}
+                        mustSave={true}
+                        name={undefined}
+                        ownerName="test"
+                        saveHandler={[Function]}
+                        secret={undefined}
+                        version={undefined}
             />
             <SignInDialog />
-            <Console />
 </div>,
         ],
         "className": "rig-container",
@@ -155,9 +220,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "error": undefined,
-            "openConfigurationsHandler": [Function],
-            "openProductManagementHandler": [Function],
-            "selectedView": "Extension Views",
+            "selectedView": "Project Overview",
             "viewerHandler": [Function],
           },
           "ref": null,
@@ -170,17 +233,34 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <ExtensionViewContainer
-                deleteExtensionViewHandler={[Function]}
-                extensionViews={Array []}
-                openEditViewHandler={[Function]}
-                openExtensionViewHandler={[Function]}
+              <ProjectView
+                backend={undefined}
+                clientId={undefined}
+                edit={[Function]}
+                frontend={undefined}
+                isLocal={true}
+                manifest={undefined}
+                name={undefined}
+                ownerName={undefined}
+                secret={undefined}
+                version={undefined}
 />,
-              false,
-              false,
-              false,
+              <ProjectDialog
+                backend={undefined}
+                clientId={undefined}
+                closeHandler={[Function]}
+                frontend={undefined}
+                isEdit={false}
+                isLocal={true}
+                manifest={undefined}
+                mustSave={true}
+                name={undefined}
+                ownerName="test"
+                saveHandler={[Function]}
+                secret={undefined}
+                version={undefined}
+/>,
               <SignInDialog />,
-              <Console />,
             ],
           },
           "ref": null,
@@ -190,23 +270,40 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "deleteExtensionViewHandler": [Function],
-                "extensionViews": Array [],
-                "openEditViewHandler": [Function],
-                "openExtensionViewHandler": [Function],
+                "backend": undefined,
+                "clientId": undefined,
+                "edit": [Function],
+                "frontend": undefined,
+                "isLocal": true,
+                "manifest": undefined,
+                "name": undefined,
+                "ownerName": undefined,
+                "secret": undefined,
+                "version": undefined,
               },
               "ref": null,
               "rendered": null,
               "type": [Function],
             },
-            false,
-            false,
-            false,
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "class",
-              "props": Object {},
+              "props": Object {
+                "backend": undefined,
+                "clientId": undefined,
+                "closeHandler": [Function],
+                "frontend": undefined,
+                "isEdit": false,
+                "isLocal": true,
+                "manifest": undefined,
+                "mustSave": true,
+                "name": undefined,
+                "ownerName": "test",
+                "saveHandler": [Function],
+                "secret": undefined,
+                "version": undefined,
+              },
               "ref": null,
               "rendered": null,
               "type": [Function],
@@ -241,10 +338,7 @@ exports[`<RigComponent /> renders extension view correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <RigComponent
-    saveManifest={[Function]}
-    userLogin={[Function]}
-/>,
+  Symbol(enzyme.__unrendered__): <RigComponent />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -260,8 +354,6 @@ ShallowWrapper {
       "children": Array [
         <Connect(RigNavComponent)
           error={undefined}
-          openConfigurationsHandler={[Function]}
-          openProductManagementHandler={[Function]}
           selectedView="Extension Views"
           viewerHandler={[Function]}
 />,
@@ -361,8 +453,6 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "error": undefined,
-          "openConfigurationsHandler": [Function],
-          "openProductManagementHandler": [Function],
           "selectedView": "Extension Views",
           "viewerHandler": [Function],
         },
@@ -457,7 +547,6 @@ ShallowWrapper {
               openEditViewHandler={[Function]}
               openExtensionViewHandler={[Function]}
 />,
-            false,
             false,
             false,
             <SignInDialog />,
@@ -555,7 +644,6 @@ ShallowWrapper {
           },
           false,
           false,
-          false,
           Object {
             "instance": null,
             "key": undefined,
@@ -589,8 +677,6 @@ ShallowWrapper {
         "children": Array [
           <Connect(RigNavComponent)
             error={undefined}
-            openConfigurationsHandler={[Function]}
-            openProductManagementHandler={[Function]}
             selectedView="Extension Views"
             viewerHandler={[Function]}
 />,
@@ -690,8 +776,6 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "error": undefined,
-            "openConfigurationsHandler": [Function],
-            "openProductManagementHandler": [Function],
             "selectedView": "Extension Views",
             "viewerHandler": [Function],
           },
@@ -788,7 +872,6 @@ ShallowWrapper {
 />,
               false,
               false,
-              false,
               <SignInDialog />,
               <Console />,
             ],
@@ -882,7 +965,6 @@ ShallowWrapper {
               "rendered": null,
               "type": [Function],
             },
-            false,
             false,
             false,
             Object {

@@ -92,18 +92,6 @@ ShallowWrapper {
 >
           <Connect(MockApiDropdownComponent) />
           <div
-                    className="personal-bar__configurations"
-                    onClick={[Function]}
-                    title="Configurations"
-          >
-                    <img
-                              alt="Configurations"
-                              height={24}
-                              src="gear.svg"
-                              width={24}
-                    />
-          </div>
-          <div
                     className="personal-bar__ext-name"
           >
                     <span>
@@ -127,6 +115,12 @@ ShallowWrapper {
         <div
           className="top-nav__item-container"
 >
+          <a
+                    className="offset top-nav-item"
+                    onClick={[Function]}
+          >
+                    Project Overview
+          </a>
           <a
                     className="offset top-nav-item top-nav-item__selected"
                     onClick={[Function]}
@@ -152,18 +146,6 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Connect(MockApiDropdownComponent) />,
-            <div
-              className="personal-bar__configurations"
-              onClick={[Function]}
-              title="Configurations"
->
-              <img
-                            alt="Configurations"
-                            height={24}
-                            src="gear.svg"
-                            width={24}
-              />
-</div>,
             <div
               className="personal-bar__ext-name"
 >
@@ -197,38 +179,6 @@ ShallowWrapper {
             "ref": null,
             "rendered": null,
             "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <img
-                alt="Configurations"
-                height={24}
-                src="gear.svg"
-                width={24}
-/>,
-              "className": "personal-bar__configurations",
-              "onClick": [Function],
-              "title": "Configurations",
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "alt": "Configurations",
-                "height": 24,
-                "src": "gear.svg",
-                "width": 24,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "img",
-            },
-            "type": "div",
           },
           Object {
             "instance": null,
@@ -298,6 +248,12 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <a
+              className="offset top-nav-item"
+              onClick={[Function]}
+>
+              Project Overview
+</a>,
+            <a
               className="offset top-nav-item top-nav-item__selected"
               onClick={[Function]}
 >
@@ -314,6 +270,19 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Project Overview",
+              "className": "offset top-nav-item",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Project Overview",
+            "type": "a",
+          },
           Object {
             "instance": null,
             "key": undefined,
@@ -358,18 +327,6 @@ ShallowWrapper {
 >
             <Connect(MockApiDropdownComponent) />
             <div
-                        className="personal-bar__configurations"
-                        onClick={[Function]}
-                        title="Configurations"
-            >
-                        <img
-                                    alt="Configurations"
-                                    height={24}
-                                    src="gear.svg"
-                                    width={24}
-                        />
-            </div>
-            <div
                         className="personal-bar__ext-name"
             >
                         <span>
@@ -393,6 +350,12 @@ ShallowWrapper {
           <div
             className="top-nav__item-container"
 >
+            <a
+                        className="offset top-nav-item"
+                        onClick={[Function]}
+            >
+                        Project Overview
+            </a>
             <a
                         className="offset top-nav-item top-nav-item__selected"
                         onClick={[Function]}
@@ -418,18 +381,6 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Connect(MockApiDropdownComponent) />,
-              <div
-                className="personal-bar__configurations"
-                onClick={[Function]}
-                title="Configurations"
->
-                <img
-                                alt="Configurations"
-                                height={24}
-                                src="gear.svg"
-                                width={24}
-                />
-</div>,
               <div
                 className="personal-bar__ext-name"
 >
@@ -463,38 +414,6 @@ ShallowWrapper {
               "ref": null,
               "rendered": null,
               "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": <img
-                  alt="Configurations"
-                  height={24}
-                  src="gear.svg"
-                  width={24}
-/>,
-                "className": "personal-bar__configurations",
-                "onClick": [Function],
-                "title": "Configurations",
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "alt": "Configurations",
-                  "height": 24,
-                  "src": "gear.svg",
-                  "width": 24,
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "img",
-              },
-              "type": "div",
             },
             Object {
               "instance": null,
@@ -564,6 +483,12 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <a
+                className="offset top-nav-item"
+                onClick={[Function]}
+>
+                Project Overview
+</a>,
+              <a
                 className="offset top-nav-item top-nav-item__selected"
                 onClick={[Function]}
 >
@@ -580,6 +505,19 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Project Overview",
+                "className": "offset top-nav-item",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Project Overview",
+              "type": "a",
+            },
             Object {
               "instance": null,
               "key": undefined,

@@ -4,46 +4,39 @@ import { RigNav } from '../rig-nav';
 import { ExtensionViewContainer } from '../extension-view-container';
 import { Console } from '../console';
 import { ExtensionViewDialog, ExtensionViewDialogState } from '../extension-view-dialog';
-import { RigConfigurationsDialog } from '../rig-configurations-dialog';
 import { EditViewDialog, EditViewProps } from '../edit-view-dialog';
 import { ProductManagementViewContainer } from '../product-management-container';
-import { missingConfigurations } from '../util/errors';
-import { TokenSpec, createSignedToken } from '../util/token';
-import { fetchExtensionManifest, fetchUserByName, fetchUserInfo } from '../util/api';
+import { fetchUserInfo } from '../util/api';
 import { Labels } from '../constants/nav-items'
 import { OverlaySizes } from '../constants/overlay-sizes';
 import { IdentityOptions } from '../constants/identity-options';
 import { MobileSizes } from '../constants/mobile';
-import { RigRole } from '../constants/rig';
-import { RigExtensionView, RigExtensionSpec, RigExtension, createRigExtension } from '../core/models/rig';
+import { RigProject, RigExtensionView, RigExtensionSpec, RigExtension, createRigExtension } from '../core/models/rig';
 import { ExtensionManifest } from '../core/models/manifest';
 import { UserSession } from '../core/models/user-session';
 import { SignInDialog } from '../sign-in-dialog';
 import { ExtensionMode, ExtensionViewType } from '../constants/extension-coordinator';
+import { ProjectView } from '../project-view/component';
+import { CreateProjectDialog } from '../create-project-dialog';
 
 export interface ReduxStateProps {
   session: UserSession;
 }
 
 export interface ReduxDispatchProps {
-  saveManifest: (manifest: ExtensionManifest) => void;
   userLogin: (userSession: UserSession) => void;
 }
 
 interface State {
-  apiHost: string;
-  clientId: string;
-  secret: string;
-  version: string;
   ownerName: string;
+  projects: RigProject[],
+  currentProject?: RigProject,
   extensionViews: RigExtensionView[],
   manifest: ExtensionManifest;
   showExtensionsView: boolean;
-  showConfigurations: boolean;
   showEditView: boolean;
   idToEdit: string;
   selectedView: string;
-  userId?: string;
   error?: string;
 }
 
@@ -53,15 +46,11 @@ const defaultChannelId = `RIG${process.env.EXT_OWNER_NAME}`;
 
 export class RigComponent extends React.Component<Props, State> {
   public state: State = {
-    apiHost: process.env.API_HOST || 'api.twitch.tv',
-    clientId: process.env.EXT_CLIENT_ID,
-    secret: process.env.EXT_SECRET,
-    version: process.env.EXT_VERSION,
     ownerName: process.env.EXT_OWNER_NAME,
+    projects: [],
     extensionViews: [],
     manifest: {} as ExtensionManifest,
     showExtensionsView: false,
-    showConfigurations: false,
     showEditView: false,
     idToEdit: '0',
     selectedView: Labels.ExtensionViews,
@@ -73,20 +62,8 @@ export class RigComponent extends React.Component<Props, State> {
   }
 
   public componentDidMount() {
-    this.initLocalStorage();
-    this.fetchInitialConfiguration();
-  }
-
-  public openConfigurationsHandler = () => {
-    this.setState({
-      showConfigurations: true,
-    });
-  }
-
-  public closeConfigurationsHandler = () => {
-    this.setState({
-      showConfigurations: false,
-    });
+    this.loadProjects();
+    this.loadExtensionViews();
   }
 
   public openEditViewHandler = (id: string) => {
@@ -103,16 +80,8 @@ export class RigComponent extends React.Component<Props, State> {
     });
   }
 
-  public viewerHandler = () => {
-    this.setState({
-      selectedView: Labels.ExtensionViews,
-    });
-  }
-
-  private openProductManagementHandler = () => {
-    this.setState({
-      selectedView: Labels.ProductManagement,
-    });
+  public viewerHandler = (selectedView: string) => {
+    this.setState({ selectedView });
   }
 
   public openExtensionViewHandler = () => {
@@ -126,29 +95,6 @@ export class RigComponent extends React.Component<Props, State> {
   public closeExtensionViewDialog = () => {
     this.setState({
       showExtensionsView: false
-    });
-  }
-
-  private refreshConfigurationsHandler = () => {
-    const tokenSpec: TokenSpec = {
-      role: RigRole,
-      secret: this.state.secret,
-      userId: this.state.userId,
-    };
-    const token = createSignedToken(tokenSpec);
-    fetchExtensionManifest(this.state.apiHost, this.state.clientId, this.state.version, token)
-      .then(this.onConfigurationSuccess)
-      .catch(this.onConfigurationError);
-  }
-
-  public onConfigurationSuccess = (manifest: any) => {
-    this.props.saveManifest(manifest);
-    this.setState({ manifest });
-  }
-
-  public onConfigurationError = (errMsg: string) => {
-    this.setState({
-      error: errMsg,
     });
   }
 
@@ -175,13 +121,13 @@ export class RigComponent extends React.Component<Props, State> {
       extensionViewDialogState.extensionViewType === ExtensionMode.Dashboard;
     const nextExtensionViewId = extensionViews.reduce((a: number, b: RigExtensionView) => Math.max(a, parseInt(b.id, 10)), 0) + 1;
     const rigExtensionSpec: RigExtensionSpec = {
-      manifest: this.state.manifest,
+      manifest: this.state.currentProject.manifest,
       index: nextExtensionViewId.toString(),
       role: extensionViewDialogState.viewerType,
       isLinked: linked,
       ownerName: this.state.ownerName,
       channelId: extensionViewDialogState.channelId,
-      secret: this.state.secret,
+      secret: this.state.currentProject.secret,
       opaqueId: extensionViewDialogState.opaqueId,
     };
     extensionViews.push({
@@ -217,9 +163,56 @@ export class RigComponent extends React.Component<Props, State> {
     this.closeEditViewHandler();
   }
 
+  private updateProject = (project: RigProject) => {
+    this.setState((previousState: State) => {
+      if (previousState.currentProject) {
+        const currentProject = Object.assign(previousState.currentProject, project);
+        const projects = previousState.projects;
+        localStorage.setItem('projects', JSON.stringify(projects));
+        return { currentProject, projects };
+      } else {
+        const projects = [project];
+        localStorage.setItem('projects', JSON.stringify(projects));
+        localStorage.setItem('currentProjectIndex', '0');
+        return { currentProject: project, projects };
+      }
+    });
+  }
+
   public render() {
+    const currentProject = this.state.currentProject || { isLocal: true} as RigProject;
     const view = this.state.selectedView === Labels.ProductManagement ? (
-      <ProductManagementViewContainer clientId={this.state.clientId} />
+      <ProductManagementViewContainer clientId={currentProject.clientId} />
+    ) : this.state.selectedView === Labels.ProjectOverview ? (
+        <div>
+          {currentProject && <ProjectView
+            isLocal={currentProject.isLocal}
+            name={currentProject.name}
+            projectFolderRoot={currentProject.projectFolderRoot}
+            backend={currentProject.backend}
+            manifest={currentProject.manifest}
+            ownerName={currentProject.ownerName}
+            clientId={currentProject.clientId}
+            secret={currentProject.secret}
+            version={currentProject.version}
+            edit={this.editProject}
+          />}
+          {!this.state.currentProject && <CreateProjectDialog
+            isLocal={currentProject.isLocal}
+            name={currentProject.name}
+            projectFolderRoot={currentProject.projectFolderRoot}
+            backend={currentProject.backend}
+            manifest={currentProject.manifest}
+            ownerName={currentProject.ownerName || this.state.ownerName}
+            clientId={currentProject.clientId}
+            secret={currentProject.secret}
+            version={currentProject.version}
+            mustSave={!this.state.currentProject}
+            closeHandler={this.closeProjectDialog}
+            saveHandler={this.updateProject}
+          />}
+          {!this.props.session && <SignInDialog />}
+        </div>
     ) : (
       <div>
         <ExtensionViewContainer
@@ -230,7 +223,7 @@ export class RigComponent extends React.Component<Props, State> {
         {this.state.showExtensionsView &&
           <ExtensionViewDialog
             channelId={defaultChannelId}
-            extensionViews={this.state.manifest.views}
+            extensionViews={currentProject.manifest.views}
             show={this.state.showExtensionsView}
             closeHandler={this.closeExtensionViewDialog}
             saveHandler={this.createExtensionView} />}
@@ -242,10 +235,6 @@ export class RigComponent extends React.Component<Props, State> {
             closeHandler={this.closeEditViewHandler}
             saveViewHandler={this.editViewHandler}
           />}
-        {this.state.showConfigurations && <RigConfigurationsDialog
-          config={this.state.manifest}
-          closeConfigurationsHandler={this.closeConfigurationsHandler}
-          refreshConfigurationsHandler={this.refreshConfigurationsHandler} />}
         {!this.props.session && <SignInDialog />}
         <Console />
       </div>
@@ -256,8 +245,6 @@ export class RigComponent extends React.Component<Props, State> {
         <RigNav
           selectedView={this.state.selectedView}
           viewerHandler={this.viewerHandler}
-          openConfigurationsHandler={this.openConfigurationsHandler}
-          openProductManagementHandler={this.openProductManagementHandler}
           error={this.state.error} />
         {view}
       </div>
@@ -276,33 +263,18 @@ export class RigComponent extends React.Component<Props, State> {
     });
   }
 
-  private fetchInitialConfiguration() {
-    if (this.state.ownerName) {
-      if (this.state.clientId && this.state.version && this.state.secret) {
-        fetchUserByName(this.state.apiHost, this.state.clientId, this.state.ownerName).then((user) => {
-          const userId = user['id'];
-          this.setState({ userId });
-          const tokenSpec: TokenSpec = {
-            role: RigRole,
-            secret: this.state.secret,
-            userId,
-          };
-          const token = createSignedToken(tokenSpec);
-          return fetchExtensionManifest(this.state.apiHost, this.state.clientId, this.state.version, token);
-        })
-          .then(this.onConfigurationSuccess)
-          .catch(this.onConfigurationError);
-      } else {
-        this.onConfigurationError(missingConfigurations({
-          'EXT_CLIENT_ID': this.state.clientId,
-          'EXT_VERSION': this.state.version,
-          'EXT_SECRET': this.state.secret,
-        }));
-      }
+  private loadProjects() {
+    const projectsValue = localStorage.getItem('projects');
+    if (projectsValue) {
+      const projects = JSON.parse(projectsValue);
+      const currentProject = projects[Number(localStorage.getItem('currentProjectIndex') || '0')];
+      this.setState({ currentProject, projects });
+    } else {
+      this.setState({ selectedView: Labels.ProjectOverview });
     }
   }
 
-  private initLocalStorage() {
+  private loadExtensionViews() {
     const extensionViewsValue = localStorage.getItem("extensionViews");
     if (extensionViewsValue) {
       const extensionViews = JSON.parse(extensionViewsValue);
