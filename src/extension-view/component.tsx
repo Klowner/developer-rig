@@ -32,6 +32,7 @@ export const PanelViewDimensions = Object.freeze({
 interface ExtensionViewProps {
   id: string;
   extension: ExtensionCoordinator.ExtensionObject;
+  installationAbilities: ExtensionCoordinator.ExtensionInstallationAbilities;
   type: string;
   mode: string;
   role?: string;
@@ -95,56 +96,64 @@ export class ExtensionViewComponent extends React.Component<Props, State> {
     let view = null;
     switch (this.props.type) {
       case ExtensionAnchor.Component:
-        view = (<ExtensionComponentView
-          bindIframeToParent={this.bindIframeToParent}
-          id={`component-${this.props.id}`}
-          role={this.props.role}
-          className="view"
-          extension={this.props.extension}
-          frameSize={this.props.frameSize}
-          position={this.props.position}
-        />);
+        view = (
+          <ExtensionComponentView
+            bindIframeToParent={this.bindIframeToParent}
+            installationAbilities={this.props.installationAbilities}
+            id={`component-${this.props.id}`}
+            role={this.props.role}
+            className="view"
+            extension={this.props.extension}
+            frameSize={this.props.frameSize}
+            position={this.props.position}
+          />
+        );
         break;
       case ExtensionViewType.Mobile:
-        view = (<ExtensionMobileView
-          bindIframeToParent={this.bindIframeToParent}
-          id={`mobile-${this.props.id}`}
-          className="view"
-          role={this.props.role}
-          extension={this.props.extension}
-          frameSize={this.props.frameSize}
-          position={this.props.position}
-          orientation={this.props.orientation}
-        />);
+        view = (
+          <ExtensionMobileView
+            bindIframeToParent={this.bindIframeToParent}
+            installationAbilities={this.props.installationAbilities}
+            id={`mobile-${this.props.id}`}
+            className="view"
+            role={this.props.role}
+            extension={this.props.extension}
+            frameSize={this.props.frameSize}
+            position={this.props.position}
+            orientation={this.props.orientation}
+          />
+        );
         break;
       case ExtensionAnchor.Overlay:
-        view = (<div
-          className="view nono_zone"
-          style={extensionProps.viewStyles}>
-          <ExtensionFrame
-            bindIframeToParent={this.bindIframeToParent}
-            className="view"
-            frameId={`frameid-${this.props.id}`}
-            extension={this.props.extension}
-            type={this.props.type}
-            mode={this.props.mode}
-          />
-        </div>)
+        view = (
+          <div className="view nono_zone" style={extensionProps.viewStyles}>
+            <ExtensionFrame
+              bindIframeToParent={this.bindIframeToParent}
+              installationAbilities={this.props.installationAbilities}
+              className="view"
+              frameId={`frameid-${this.props.id}`}
+              extension={this.props.extension}
+              type={this.props.type}
+              mode={this.props.mode}
+            />
+          </div>
+        );
         break;
       default:
         // standard view for panels, live config, and broadcaster config
-        view = (<div
-          className="view"
-          style={extensionProps.viewStyles}>
-          <ExtensionFrame
-            bindIframeToParent={this.bindIframeToParent}
-            className="view"
-            frameId={`frameid-${this.props.id}`}
-            extension={this.props.extension}
-            type={this.props.type}
-            mode={this.props.mode}
-          />
-        </div>)
+        view = (
+          <div className="view" style={extensionProps.viewStyles}>
+            <ExtensionFrame
+              bindIframeToParent={this.bindIframeToParent}
+              installationAbilities={this.props.installationAbilities}
+              className="view"
+              frameId={`frameid-${this.props.id}`}
+              extension={this.props.extension}
+              type={this.props.type}
+              mode={this.props.mode}
+            />
+          </div>
+        );
         break;
     }
     return view;

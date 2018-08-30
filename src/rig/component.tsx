@@ -177,6 +177,9 @@ export class RigComponent extends React.Component<Props, State> {
     extensionViews.push({
       id: nextExtensionViewId.toString(),
       type: extensionViewDialogState.extensionViewType,
+      features: {
+        isChatEnabled: extensionViewDialogState.isChatEnabled,
+      },
       extension: createExtensionObject(
         this.state.manifest,
         nextExtensionViewId.toString(),

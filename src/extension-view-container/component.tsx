@@ -32,6 +32,7 @@ export class ExtensionViewContainer extends React.Component<Props> {
           key={view.id}
           id={view.id}
           extension={view.extension}
+          installationAbilities={view.features}
           type={view.type}
           mode={view.mode}
           role={view.mode === ExtensionMode.Viewer ? view.role : ConfigNames[view.mode]}

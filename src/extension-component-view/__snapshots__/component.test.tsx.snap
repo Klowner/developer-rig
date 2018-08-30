@@ -157,6 +157,7 @@ ShallowWrapper {
                               }
                 }
                 frameId="frameid-1"
+                installationAbilities={undefined}
                 mode="viewer"
                 type="component"
         />
@@ -231,6 +232,7 @@ ShallowWrapper {
                             }
           }
           frameId="frameid-1"
+          installationAbilities={undefined}
           mode="viewer"
           type="component"
 />,
@@ -304,6 +306,7 @@ ShallowWrapper {
             ],
           },
           "frameId": "frameid-1",
+          "installationAbilities": undefined,
           "mode": "viewer",
           "type": "component",
         },
@@ -391,6 +394,7 @@ ShallowWrapper {
                                       }
                     }
                     frameId="frameid-1"
+                    installationAbilities={undefined}
                     mode="viewer"
                     type="component"
           />
@@ -465,6 +469,7 @@ ShallowWrapper {
                                   }
             }
             frameId="frameid-1"
+            installationAbilities={undefined}
             mode="viewer"
             type="component"
 />,
@@ -538,6 +543,7 @@ ShallowWrapper {
               ],
             },
             "frameId": "frameid-1",
+            "installationAbilities": undefined,
             "mode": "viewer",
             "type": "component",
           },
@@ -693,6 +699,7 @@ ShallowWrapper {
                               }
                 }
                 frameId="frameid-1"
+                installationAbilities={undefined}
                 mode="viewer"
                 type="component"
         />
@@ -754,6 +761,7 @@ ShallowWrapper {
                             }
           }
           frameId="frameid-1"
+          installationAbilities={undefined}
           mode="viewer"
           type="component"
 />,
@@ -816,6 +824,7 @@ ShallowWrapper {
             ],
           },
           "frameId": "frameid-1",
+          "installationAbilities": undefined,
           "mode": "viewer",
           "type": "component",
         },
@@ -892,6 +901,7 @@ ShallowWrapper {
                                       }
                     }
                     frameId="frameid-1"
+                    installationAbilities={undefined}
                     mode="viewer"
                     type="component"
           />
@@ -953,6 +963,7 @@ ShallowWrapper {
                                   }
             }
             frameId="frameid-1"
+            installationAbilities={undefined}
             mode="viewer"
             type="component"
 />,
@@ -1015,6 +1026,7 @@ ShallowWrapper {
               ],
             },
             "frameId": "frameid-1",
+            "installationAbilities": undefined,
             "mode": "viewer",
             "type": "component",
           },

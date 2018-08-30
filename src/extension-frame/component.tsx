@@ -9,6 +9,7 @@ export interface PublicProps {
   className: string;
   frameId: string;
   extension: ExtensionCoordinator.ExtensionObject;
+  installationAbilities: ExtensionCoordinator.ExtensionInstallationAbilities;
   type: string;
   mode: string;
   bindIframeToParent: (iframe: HTMLIFrameElement) => void;
@@ -48,9 +49,7 @@ export class ExtensionFrame extends React.Component<Props> {
       channelId: parseInt(process.env.EXT_CHANNEL_ID, 0),
       extension: this.props.extension,
       iframeClassName: IFRAME_CLASS,
-      installationAbilities: {
-        isChatEnabled: true,
-      },
+      installationAbilities: this.props.installationAbilities,
       loginId: null,
       mode: this.props.mode as ExtensionCoordinator.ExtensionMode,
       platform: (this.props.type === ExtensionViewType.Mobile) ? ExtensionPlatform.Mobile : ExtensionPlatform.Web,

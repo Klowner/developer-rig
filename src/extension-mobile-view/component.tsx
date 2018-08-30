@@ -9,6 +9,7 @@ const AbsolutePosition = 'absolute';
 
 interface ExtensionMobileViewProps {
   extension: ExtensionCoordinator.ExtensionObject;
+  installationAbilities: ExtensionCoordinator.ExtensionInstallationAbilities;
   frameSize: FrameSize;
   id: string;
   orientation: string;
@@ -67,6 +68,7 @@ export class ExtensionMobileView extends React.Component<Props> {
           <div style={this.computeFrameStyles()}>
           <ExtensionFrame
             bindIframeToParent={this.props.bindIframeToParent}
+            installationAbilities={this.props.installationAbilities}
             className="view"
             extension={this.props.extension}
             frameId={`frameid-${this.props.id}`}

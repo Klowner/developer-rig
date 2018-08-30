@@ -6,6 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ExtensionFrame
     bindIframeToParent={[Function]}
+    className="view"
     extension={
         Object {
             "authorName": "test",
@@ -62,6 +63,11 @@ ShallowWrapper {
     }
     frameId="0"
     iframe=""
+    installationAbilities={
+        Object {
+            "isChatEnabled": true,
+          }
+    }
     mode="config"
     type="config"
 />,
@@ -118,6 +124,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ExtensionFrame
     bindIframeToParent={[Function]}
+    className="view"
     extension={
         Object {
             "authorName": "test",
@@ -174,6 +181,11 @@ ShallowWrapper {
     }
     frameId="0"
     iframe=""
+    installationAbilities={
+        Object {
+            "isChatEnabled": true,
+          }
+    }
     mode="dashboard"
     type="liveConfig"
 />,
@@ -230,6 +242,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ExtensionFrame
     bindIframeToParent={[Function]}
+    className="view"
     extension={
         Object {
             "authorName": "test",
@@ -286,6 +299,11 @@ ShallowWrapper {
     }
     frameId="0"
     iframe=""
+    installationAbilities={
+        Object {
+            "isChatEnabled": true,
+          }
+    }
     mode="dashboard"
     type="liveConfig"
 />,
@@ -342,6 +360,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ExtensionFrame
     bindIframeToParent={[Function]}
+    className="view"
     extension={
         Object {
             "authorName": "test",
@@ -398,6 +417,11 @@ ShallowWrapper {
     }
     frameId="0"
     iframe=""
+    installationAbilities={
+        Object {
+            "isChatEnabled": true,
+          }
+    }
     mode="viewer"
     type="panel"
 />,
@@ -454,6 +478,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ExtensionFrame
     bindIframeToParent={[Function]}
+    className="view"
     extension={
         Object {
             "authorName": "test",
@@ -510,6 +535,11 @@ ShallowWrapper {
     }
     frameId="0"
     iframe=""
+    installationAbilities={
+        Object {
+            "isChatEnabled": true,
+          }
+    }
     mode="viewer"
     type="video_overlay"
 />,
@@ -566,6 +596,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ExtensionFrame
     bindIframeToParent={[Function]}
+    className="view"
     extension={
         Object {
             "authorName": "test",
@@ -622,6 +653,11 @@ ShallowWrapper {
     }
     frameId="0"
     iframe=""
+    installationAbilities={
+        Object {
+            "isChatEnabled": true,
+          }
+    }
     mode="viewer"
     type="video_overlay"
 />,

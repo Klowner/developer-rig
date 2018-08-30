@@ -186,6 +186,7 @@ ShallowWrapper {
                             }
           }
           id="component-0"
+          installationAbilities={undefined}
           position={
                     Object {
                               "x": 0,
@@ -393,6 +394,7 @@ ShallowWrapper {
             "width": 0,
           },
           "id": "component-0",
+          "installationAbilities": undefined,
           "position": Object {
             "x": 0,
             "y": 0,
@@ -506,6 +508,7 @@ ShallowWrapper {
                                   }
             }
             id="component-0"
+            installationAbilities={undefined}
             position={
                         Object {
                                     "x": 0,
@@ -713,6 +716,7 @@ ShallowWrapper {
               "width": 0,
             },
             "id": "component-0",
+            "installationAbilities": undefined,
             "position": Object {
               "x": 0,
               "y": 0,
@@ -920,6 +924,7 @@ ShallowWrapper {
                                       }
                     }
                     frameId="frameid-0"
+                    installationAbilities={undefined}
                     mode="viewer"
                     type="config"
           />
@@ -1102,6 +1107,7 @@ ShallowWrapper {
                                   }
             }
             frameId="frameid-0"
+            installationAbilities={undefined}
             mode="viewer"
             type="config"
 />,
@@ -1172,6 +1178,7 @@ ShallowWrapper {
               ],
             },
             "frameId": "frameid-0",
+            "installationAbilities": undefined,
             "mode": "viewer",
             "type": "config",
           },
@@ -1281,6 +1288,7 @@ ShallowWrapper {
                                               }
                         }
                         frameId="frameid-0"
+                        installationAbilities={undefined}
                         mode="viewer"
                         type="config"
             />
@@ -1463,6 +1471,7 @@ ShallowWrapper {
                                         }
               }
               frameId="frameid-0"
+              installationAbilities={undefined}
               mode="viewer"
               type="config"
 />,
@@ -1533,6 +1542,7 @@ ShallowWrapper {
                 ],
               },
               "frameId": "frameid-0",
+              "installationAbilities": undefined,
               "mode": "viewer",
               "type": "config",
             },
@@ -1739,6 +1749,7 @@ ShallowWrapper {
                                       }
                     }
                     frameId="frameid-0"
+                    installationAbilities={undefined}
                     mode="viewer"
                     type="dashboard"
           />
@@ -1918,6 +1929,7 @@ ShallowWrapper {
                                   }
             }
             frameId="frameid-0"
+            installationAbilities={undefined}
             mode="viewer"
             type="dashboard"
 />,
@@ -1988,6 +2000,7 @@ ShallowWrapper {
               ],
             },
             "frameId": "frameid-0",
+            "installationAbilities": undefined,
             "mode": "viewer",
             "type": "dashboard",
           },
@@ -2097,6 +2110,7 @@ ShallowWrapper {
                                               }
                         }
                         frameId="frameid-0"
+                        installationAbilities={undefined}
                         mode="viewer"
                         type="dashboard"
             />
@@ -2276,6 +2290,7 @@ ShallowWrapper {
                                         }
               }
               frameId="frameid-0"
+              installationAbilities={undefined}
               mode="viewer"
               type="dashboard"
 />,
@@ -2346,6 +2361,7 @@ ShallowWrapper {
                 ],
               },
               "frameId": "frameid-0",
+              "installationAbilities": undefined,
               "mode": "viewer",
               "type": "dashboard",
             },
@@ -2556,6 +2572,7 @@ ShallowWrapper {
                             }
           }
           id="mobile-0"
+          installationAbilities={undefined}
           orientation="Portrait"
           position={
                     Object {
@@ -2764,6 +2781,7 @@ ShallowWrapper {
             "width": 0,
           },
           "id": "mobile-0",
+          "installationAbilities": undefined,
           "orientation": "Portrait",
           "position": Object {
             "x": 0,
@@ -2878,6 +2896,7 @@ ShallowWrapper {
                                   }
             }
             id="mobile-0"
+            installationAbilities={undefined}
             orientation="Portrait"
             position={
                         Object {
@@ -3086,6 +3105,7 @@ ShallowWrapper {
               "width": 0,
             },
             "id": "mobile-0",
+            "installationAbilities": undefined,
             "orientation": "Portrait",
             "position": Object {
               "x": 0,
@@ -3294,6 +3314,7 @@ ShallowWrapper {
                                       }
                     }
                     frameId="frameid-0"
+                    installationAbilities={undefined}
                     mode="viewer"
                     type="video_overlay"
           />
@@ -3473,6 +3494,7 @@ ShallowWrapper {
                                   }
             }
             frameId="frameid-0"
+            installationAbilities={undefined}
             mode="viewer"
             type="video_overlay"
 />,
@@ -3543,6 +3565,7 @@ ShallowWrapper {
               ],
             },
             "frameId": "frameid-0",
+            "installationAbilities": undefined,
             "mode": "viewer",
             "type": "video_overlay",
           },
@@ -3652,6 +3675,7 @@ ShallowWrapper {
                                               }
                         }
                         frameId="frameid-0"
+                        installationAbilities={undefined}
                         mode="viewer"
                         type="video_overlay"
             />
@@ -3831,6 +3855,7 @@ ShallowWrapper {
                                         }
               }
               frameId="frameid-0"
+              installationAbilities={undefined}
               mode="viewer"
               type="video_overlay"
 />,
@@ -3901,6 +3926,7 @@ ShallowWrapper {
                 ],
               },
               "frameId": "frameid-0",
+              "installationAbilities": undefined,
               "mode": "viewer",
               "type": "video_overlay",
             },
@@ -4108,6 +4134,7 @@ ShallowWrapper {
                                       }
                     }
                     frameId="frameid-0"
+                    installationAbilities={undefined}
                     mode="viewer"
                     type="panel"
           />
@@ -4289,6 +4316,7 @@ ShallowWrapper {
                                   }
             }
             frameId="frameid-0"
+            installationAbilities={undefined}
             mode="viewer"
             type="panel"
 />,
@@ -4359,6 +4387,7 @@ ShallowWrapper {
               ],
             },
             "frameId": "frameid-0",
+            "installationAbilities": undefined,
             "mode": "viewer",
             "type": "panel",
           },
@@ -4469,6 +4498,7 @@ ShallowWrapper {
                                               }
                         }
                         frameId="frameid-0"
+                        installationAbilities={undefined}
                         mode="viewer"
                         type="panel"
             />
@@ -4650,6 +4680,7 @@ ShallowWrapper {
                                         }
               }
               frameId="frameid-0"
+              installationAbilities={undefined}
               mode="viewer"
               type="panel"
 />,
@@ -4720,6 +4751,7 @@ ShallowWrapper {
                 ],
               },
               "frameId": "frameid-0",
+              "installationAbilities": undefined,
               "mode": "viewer",
               "type": "panel",
             },
@@ -4927,6 +4959,7 @@ ShallowWrapper {
                                       }
                     }
                     frameId="frameid-0"
+                    installationAbilities={undefined}
                     mode="viewer"
                     type="panel"
           />
@@ -5108,6 +5141,7 @@ ShallowWrapper {
                                   }
             }
             frameId="frameid-0"
+            installationAbilities={undefined}
             mode="viewer"
             type="panel"
 />,
@@ -5178,6 +5212,7 @@ ShallowWrapper {
               ],
             },
             "frameId": "frameid-0",
+            "installationAbilities": undefined,
             "mode": "viewer",
             "type": "panel",
           },
@@ -5288,6 +5323,7 @@ ShallowWrapper {
                                               }
                         }
                         frameId="frameid-0"
+                        installationAbilities={undefined}
                         mode="viewer"
                         type="panel"
             />
@@ -5469,6 +5505,7 @@ ShallowWrapper {
                                         }
               }
               frameId="frameid-0"
+              installationAbilities={undefined}
               mode="viewer"
               type="panel"
 />,
@@ -5539,6 +5576,7 @@ ShallowWrapper {
                 ],
               },
               "frameId": "frameid-0",
+              "installationAbilities": undefined,
               "mode": "viewer",
               "type": "panel",
             },
@@ -5745,6 +5783,7 @@ ShallowWrapper {
                                       }
                     }
                     frameId="frameid-0"
+                    installationAbilities={undefined}
                     mode="viewer"
                     type="panel"
           />
@@ -5924,6 +5963,7 @@ ShallowWrapper {
                                   }
             }
             frameId="frameid-0"
+            installationAbilities={undefined}
             mode="viewer"
             type="panel"
 />,
@@ -5994,6 +6034,7 @@ ShallowWrapper {
               ],
             },
             "frameId": "frameid-0",
+            "installationAbilities": undefined,
             "mode": "viewer",
             "type": "panel",
           },
@@ -6103,6 +6144,7 @@ ShallowWrapper {
                                               }
                         }
                         frameId="frameid-0"
+                        installationAbilities={undefined}
                         mode="viewer"
                         type="panel"
             />
@@ -6282,6 +6324,7 @@ ShallowWrapper {
                                         }
               }
               frameId="frameid-0"
+              installationAbilities={undefined}
               mode="viewer"
               type="panel"
 />,
@@ -6352,6 +6395,7 @@ ShallowWrapper {
                 ],
               },
               "frameId": "frameid-0",
+              "installationAbilities": undefined,
               "mode": "viewer",
               "type": "panel",
             },
@@ -6558,6 +6602,7 @@ ShallowWrapper {
                                       }
                     }
                     frameId="frameid-0"
+                    installationAbilities={undefined}
                     mode="viewer"
                     type="panel"
           />
@@ -6737,6 +6782,7 @@ ShallowWrapper {
                                   }
             }
             frameId="frameid-0"
+            installationAbilities={undefined}
             mode="viewer"
             type="panel"
 />,
@@ -6807,6 +6853,7 @@ ShallowWrapper {
               ],
             },
             "frameId": "frameid-0",
+            "installationAbilities": undefined,
             "mode": "viewer",
             "type": "panel",
           },
@@ -6916,6 +6963,7 @@ ShallowWrapper {
                                               }
                         }
                         frameId="frameid-0"
+                        installationAbilities={undefined}
                         mode="viewer"
                         type="panel"
             />
@@ -7095,6 +7143,7 @@ ShallowWrapper {
                                         }
               }
               frameId="frameid-0"
+              installationAbilities={undefined}
               mode="viewer"
               type="panel"
 />,
@@ -7165,6 +7214,7 @@ ShallowWrapper {
                 ],
               },
               "frameId": "frameid-0",
+              "installationAbilities": undefined,
               "mode": "viewer",
               "type": "panel",
             },
@@ -7372,6 +7422,7 @@ ShallowWrapper {
                                       }
                     }
                     frameId="frameid-0"
+                    installationAbilities={undefined}
                     mode="viewer"
                     type="panel"
           />
@@ -7553,6 +7604,7 @@ ShallowWrapper {
                                   }
             }
             frameId="frameid-0"
+            installationAbilities={undefined}
             mode="viewer"
             type="panel"
 />,
@@ -7623,6 +7675,7 @@ ShallowWrapper {
               ],
             },
             "frameId": "frameid-0",
+            "installationAbilities": undefined,
             "mode": "viewer",
             "type": "panel",
           },
@@ -7733,6 +7786,7 @@ ShallowWrapper {
                                               }
                         }
                         frameId="frameid-0"
+                        installationAbilities={undefined}
                         mode="viewer"
                         type="panel"
             />
@@ -7914,6 +7968,7 @@ ShallowWrapper {
                                         }
               }
               frameId="frameid-0"
+              installationAbilities={undefined}
               mode="viewer"
               type="panel"
 />,
@@ -7984,6 +8039,7 @@ ShallowWrapper {
                 ],
               },
               "frameId": "frameid-0",
+              "installationAbilities": undefined,
               "mode": "viewer",
               "type": "panel",
             },
@@ -8191,6 +8247,7 @@ ShallowWrapper {
                                       }
                     }
                     frameId="frameid-0"
+                    installationAbilities={undefined}
                     mode="viewer"
                     type="panel"
           />
@@ -8372,6 +8429,7 @@ ShallowWrapper {
                                   }
             }
             frameId="frameid-0"
+            installationAbilities={undefined}
             mode="viewer"
             type="panel"
 />,
@@ -8442,6 +8500,7 @@ ShallowWrapper {
               ],
             },
             "frameId": "frameid-0",
+            "installationAbilities": undefined,
             "mode": "viewer",
             "type": "panel",
           },
@@ -8552,6 +8611,7 @@ ShallowWrapper {
                                               }
                         }
                         frameId="frameid-0"
+                        installationAbilities={undefined}
                         mode="viewer"
                         type="panel"
             />
@@ -8733,6 +8793,7 @@ ShallowWrapper {
                                         }
               }
               frameId="frameid-0"
+              installationAbilities={undefined}
               mode="viewer"
               type="panel"
 />,
@@ -8803,6 +8864,7 @@ ShallowWrapper {
                 ],
               },
               "frameId": "frameid-0",
+              "installationAbilities": undefined,
               "mode": "viewer",
               "type": "panel",
             },
@@ -9009,6 +9071,7 @@ ShallowWrapper {
                                       }
                     }
                     frameId="frameid-0"
+                    installationAbilities={undefined}
                     mode="viewer"
                     type="panel"
           />
@@ -9188,6 +9251,7 @@ ShallowWrapper {
                                   }
             }
             frameId="frameid-0"
+            installationAbilities={undefined}
             mode="viewer"
             type="panel"
 />,
@@ -9258,6 +9322,7 @@ ShallowWrapper {
               ],
             },
             "frameId": "frameid-0",
+            "installationAbilities": undefined,
             "mode": "viewer",
             "type": "panel",
           },
@@ -9367,6 +9432,7 @@ ShallowWrapper {
                                               }
                         }
                         frameId="frameid-0"
+                        installationAbilities={undefined}
                         mode="viewer"
                         type="panel"
             />
@@ -9546,6 +9612,7 @@ ShallowWrapper {
                                         }
               }
               frameId="frameid-0"
+              installationAbilities={undefined}
               mode="viewer"
               type="panel"
 />,
@@ -9616,6 +9683,7 @@ ShallowWrapper {
                 ],
               },
               "frameId": "frameid-0",
+              "installationAbilities": undefined,
               "mode": "viewer",
               "type": "panel",
             },
@@ -9786,6 +9854,7 @@ ShallowWrapper {
                                       }
                     }
                     frameId="frameid-0"
+                    installationAbilities={undefined}
                     mode="viewer"
                     type="panel"
           />
@@ -9947,6 +10016,7 @@ ShallowWrapper {
                                   }
             }
             frameId="frameid-0"
+            installationAbilities={undefined}
             mode="viewer"
             type="panel"
 />,
@@ -9999,6 +10069,7 @@ ShallowWrapper {
               ],
             },
             "frameId": "frameid-0",
+            "installationAbilities": undefined,
             "mode": "viewer",
             "type": "panel",
           },
@@ -10090,6 +10161,7 @@ ShallowWrapper {
                                               }
                         }
                         frameId="frameid-0"
+                        installationAbilities={undefined}
                         mode="viewer"
                         type="panel"
             />
@@ -10251,6 +10323,7 @@ ShallowWrapper {
                                         }
               }
               frameId="frameid-0"
+              installationAbilities={undefined}
               mode="viewer"
               type="panel"
 />,
@@ -10303,6 +10376,7 @@ ShallowWrapper {
                 ],
               },
               "frameId": "frameid-0",
+              "installationAbilities": undefined,
               "mode": "viewer",
               "type": "panel",
             },

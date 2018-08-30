@@ -4,24 +4,21 @@ import { createExtensionForTest } from '../tests/constants/extension';
 import { ExtensionFrame } from './component';
 import { ExtensionViewType, ExtensionAnchor, ExtensionMode } from '../constants/extension-coordinator';
 
-const setupShallow = setupShallowTest(ExtensionFrame, () => ({
-  frameId: '0',
-  extension: createExtensionForTest(),
-  type: ExtensionAnchor.Panel,
-  mode: ExtensionMode.Viewer,
-  iframe: '',
-  bindIframeToParent: jest.fn(),
-}));
-
-const setupMount = setupMountTest(ExtensionFrame, () => ({
+const defaultPropGenerator = () => ({
   className: 'view',
   frameId: '0',
+  installationAbilities: {
+    isChatEnabled: true,
+  },
   extension: createExtensionForTest(),
   type: ExtensionAnchor.Panel,
   mode: ExtensionMode.Viewer,
   iframe: '',
   bindIframeToParent: jest.fn(),
-}));
+});
+
+const setupShallow = setupShallowTest(ExtensionFrame, defaultPropGenerator);
+const setupMount = setupMountTest(ExtensionFrame, defaultPropGenerator);
 
 describe('<ExtensionFrame />', () => {
   it('onload postMessages data correctly', () => {
