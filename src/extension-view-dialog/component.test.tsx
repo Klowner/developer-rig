@@ -1,10 +1,11 @@
 import { setupShallowTest } from '../tests/enzyme-util/shallow';
 import { ExtensionViewDialog } from './component';
-import { DefaultExtensionType } from '../constants/extension-types'
+import { DefaultExtensionType, ExtensionAnchors } from '../constants/extension-types'
 import { DefaultOverlaySize } from '../constants/overlay-sizes'
 import { ViewerTypes, DefaultViewerType } from '../constants/viewer-types'
 import { RadioOption } from './radio-option';
-import { ExtensionViewType} from '../constants/extension-coordinator';
+import { ExtensionViewType, ExtensionMode, ExtensionAnchor} from '../constants/extension-coordinator';
+import { DivOption } from './div-option';
 
 describe('<ExtensionViewDialog />', () => {
   const setupShallow = setupShallowTest(ExtensionViewDialog, () => ({
@@ -46,11 +47,14 @@ describe('<ExtensionViewDialog />', () => {
     expect(wrapper.type()).toBe(null);
   });
 
-  it('shows nothing if no supported views', () => {
+  it('only shows the default views of no other views supported', () => {
     const { wrapper } = setupShallow({
       extensionViews: {}
     })
-    expect(wrapper).toMatchSnapshot();
+
+    expect(wrapper.find(DivOption).length).toEqual(2);
+    expect(wrapper.find(DivOption).someWhere((node) => node.prop('name') === ExtensionAnchors[ExtensionMode.Config]));
+    expect(wrapper.find(DivOption).someWhere((node) => node.prop('name') === ExtensionAnchors[ExtensionMode.Dashboard]));
   });
 
   it('renders correct identity options when logged in user type is selected', () => {
@@ -83,7 +87,11 @@ describe('<ExtensionViewDialog />', () => {
     const { wrapper } = setupShallow();
 
     it('renders correctly', () => {
-      expect(wrapper).toMatchSnapshot();
+      expect(wrapper.find(DivOption).length).toEqual(4);
+      expect(wrapper.find(DivOption).someWhere((node) => node.prop('name') === ExtensionAnchors[ExtensionMode.Config]));
+      expect(wrapper.find(DivOption).someWhere((node) => node.prop('name') === ExtensionAnchors[ExtensionMode.Dashboard]));
+      expect(wrapper.find(DivOption).someWhere((node) => node.prop('name') === ExtensionAnchors[ExtensionAnchor.Panel]));
+      expect(wrapper.find(DivOption).someWhere((node) => node.prop('name') === ExtensionAnchors[ExtensionAnchor.Overlay]));
     });
 
     it('has the correct default state', () => {
@@ -115,7 +123,10 @@ describe('<ExtensionViewDialog />', () => {
       }
     });
     it('renders correctly', () => {
-      expect(wrapper).toMatchSnapshot();
+      expect(wrapper.find(DivOption).length).toEqual(3);
+      expect(wrapper.find(DivOption).someWhere((node) => node.prop('name') === ExtensionAnchors[ExtensionAnchor.Panel]));
+      expect(wrapper.find(DivOption).someWhere((node) => node.prop('name') === ExtensionAnchors[ExtensionMode.Config]));
+      expect(wrapper.find(DivOption).someWhere((node) => node.prop('name') === ExtensionAnchors[ExtensionMode.Dashboard]));
     });
 
     it('has the correct default state', () => {
@@ -145,7 +156,9 @@ describe('<ExtensionViewDialog />', () => {
       }
     });
     it('renders correctly', () => {
-      expect(wrapper).toMatchSnapshot();
+      expect(wrapper.find(DivOption).someWhere((node) => node.prop('name') === ExtensionAnchors[ExtensionAnchor.Component]));
+      expect(wrapper.find(DivOption).someWhere((node) => node.prop('name') === ExtensionAnchors[ExtensionMode.Config]));
+      expect(wrapper.find(DivOption).someWhere((node) => node.prop('name') === ExtensionAnchors[ExtensionMode.Dashboard]));
     });
 
     it('has the correct default state', () => {
