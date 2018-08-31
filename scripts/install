@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Configure the temporary directory.
-if [ "$(uname)" != "Darwin" ]; then
+PLATFORM="$(uname)"
+if [ "${PLATFORM}" != "Darwin" ] && [ "${PLATFORM}" != "Linux" ]; then
 	echo "This script is for Mac only."
 	exit 1
 fi
@@ -22,46 +23,77 @@ check() {
 	[ $? -eq 0 ] || fail "Cannot $1."
 }
 
-# Download and install Git, if necessary.
-if ! git --version > /dev/null 2>&1; then
-	DMG="$T/git-2.6.2-intel-universal-mavericks.dmg"
-	curl -o "$DMG" 'https://phoenixnap.dl.sourceforge.net/project/git-osx-installer/git-2.6.2-intel-universal-mavericks.dmg'
-	check "download Git"
-	hdiutil attach "$DMG"
-	check "attach Git DMG file"
-	cd "/Volumes/Git 2.6.2 Mavericks Intel Universal"
-	sudo installer -pkg *.pkg -target /
-	check "install Git"
-	cd $HOME
-	hdiutil detach "/Volumes/Git 2.6.2 Mavericks Intel Universal"
-	rm $DMG
-fi
+install_darwin() {
+	# Download and install Git, if necessary.
+	if ! git --version > /dev/null 2>&1; then
+		DMG="$T/git-2.6.2-intel-universal-mavericks.dmg"
+		curl -o "$DMG" 'https://phoenixnap.dl.sourceforge.net/project/git-osx-installer/git-2.6.2-intel-universal-mavericks.dmg'
+		check "download Git"
+		hdiutil attach "$DMG"
+		check "attach Git DMG file"
+		cd "/Volumes/Git 2.6.2 Mavericks Intel Universal"
+		sudo installer -pkg *.pkg -target /
+		check "install Git"
+		cd $HOME
+		hdiutil detach "/Volumes/Git 2.6.2 Mavericks Intel Universal"
+		rm $DMG
+	fi
 
-# Download and install Node, if necessary.
-if ! node --version > /dev/null 2>&1; then
-	PKG="$T/node-v8.11.3.pkg"
-	curl -o "$PKG" 'https://nodejs.org/dist/v8.11.3/node-v8.11.3.pkg'
-	check "download Node"
-	sudo installer -pkg "$PKG" -target /
-	check "install Node"
-else
-	V=$(node --version | sed -e 's/v//' -e 's/\..*//')
-	if [ $V -lt 6 ]; then
-		echo -e "\033[0;31mYour current version of node is less than 6.  Before re-running this script,"
-		echo "you must either uninstall the current version or, if you already have a later"
-		echo "version installed, ensure it is earlier in your path so this and other"
-		echo -e "Developer Rig scripts will use it.\033[0m"
+	# Download and install Node, if necessary.
+	if ! node --version > /dev/null 2>&1; then
+		PKG="$T/node-v8.11.3.pkg"
+		curl -o "$PKG" 'https://nodejs.org/dist/v8.11.3/node-v8.11.3.pkg'
+		check "download Node"
+		sudo installer -pkg "$PKG" -target /
+		check "install Node"
+	else
+		V=$(node --version | sed -e 's/v//' -e 's/\..*//')
+		if [ $V -lt 6 ]; then
+			echo -e "\033[0;31mYour current version of node is less than 6.  Before re-running this script,"
+			echo "you must either uninstall the current version or, if you already have a later"
+			echo "version installed, ensure it is earlier in your path so this and other"
+			echo -e "Developer Rig scripts will use it.\033[0m"
+			exit 1
+		fi
+	fi
+
+	# Download and install Yarn, if necessary.
+	if ! yarn --version > /dev/null 2>&1; then
+		touch ~/.profile
+		rm -rf ~/.yarn
+		curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --rc
+		check "install Yarn"
+		echo -e "\033[1;32mNOTE:\033[0;32m  A fresh installation of Yarn requires a new terminal window.  Please run"
+		echo -e "the script again in a new terminal window\033[0m."
 		exit 1
 	fi
-fi
+}
 
-# Download and install Yarn, if necessary.
-if ! yarn --version > /dev/null 2>&1; then
-	touch ~/.profile
-	rm -rf ~/.yarn
-	curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --rc
-	check "install Yarn"
-	echo -e "\033[1;32mNOTE:\033[0;32m  A fresh installation of Yarn requires a new terminal window.  Please run"
-	echo -e "the script again in a new terminal window\033[0m."
-	exit 1
-fi
+install_linux() {
+	# Check for git
+	local MISSING=()
+	if ! git --version > /dev/null 2>&1; then
+		MISSING+=("git")
+	fi
+
+	# Check for node
+	if ! node --version > /dev/null 2>&1; then
+		MISSING+=("nodejs")
+	fi
+
+	# Check for yarn
+	if ! yarn --version > /dev/null 2>&1; then
+		MISSING+=("yarn")
+	fi
+
+	if [ ${#MISSING[@]} -gt 0 ]; then
+		echo -e "\033[1;32mNOTE:\033[0;32m  The following commands where not found: ${MISSING[@]}"
+		echo -e "\033[1;32mNOTE:\033[0;32m  Please install the necessary packages and try again."
+		exit 1
+	fi
+}
+
+case "${PLATFORM}" in
+	"Linux") install_linux ;;
+	"Darwin") install_darwin ;;
+esac

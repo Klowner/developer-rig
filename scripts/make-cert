@@ -4,9 +4,11 @@
 # https://stackoverflow.com/questions/21297139/how-do-you-sign-a-certificate-signing-request-with-your-certification-authority
 # https://stackoverflow.com/questions/35031149/set-imported-certificate-to-always-be-trusted-in-mac-os-x
 
+PLATFORM="$(uname)"
+
 # Check the platform.
-if [ "$(uname)" != "Darwin" ]; then
-	echo "This script is for Mac only."
+if [ "${PLATFORM}" != "Darwin" ] && [ "${PLATFORM}" != "Linux" ]; then
+	echo "This script is for Mac & Linux only."
 	exit 1
 fi
 
@@ -35,8 +37,15 @@ check() {
 NEEDS_INSTALLATION=true
 SSL="$D/../ssl"
 if [ -s "$SSL/cacert.crt" -a -s "$SSL/cacert.key" -a -s "$SSL/selfsigned.crt" -a -s "$SSL/selfsigned.key" -a -s "$SSL/server.crt" -a -s "$SSL/server.key" ]; then
-	# The certificates have been previously created.  Determine if the certificates need installation.
-	security find-certificate -a | grep -Fq "Twitch Developer Rig CA" && NEEDS_INSTALLATION=false
+	case $PLATFORM in
+		"Darwin")
+			# The certificates have been previously created.  Determine if the certificates need installation.
+			security find-certificate -a | grep -Fq "Twitch Developer Rig CA" && NEEDS_INSTALLATION=false
+			;;
+		"Linux")
+			trust list | grep -Fq "Twitch Developer Rig CA" && NEEDS_INSTALLATION=false
+			;;
+	esac
 else
 	# Determine the availability of OpenSSL.
 	openssl version > /dev/null 2>&1
@@ -90,8 +99,7 @@ mkdir -p "$CONF"
 cp "$SSL"/server.* "$CONF"
 check "place the extension server certificate files"
 
-# Add all certificates to the local machine's root certificate store.
-if $NEEDS_INSTALLATION; then
+install_cert_darwin() {
 	touch /etc/hosts 2> /dev/null || echo "Please enter your password to install the Twitch Developer Rig certificate."
 	sudo security add-trusted-cert -d -p ssl -u -1 -k /Library/Keychains/System.keychain "$SSL/cacert.crt"
 	check "add the CA certificate to the local machine's root certificate store"
@@ -148,4 +156,39 @@ if $NEEDS_INSTALLATION; then
 		echo -e 'Press "return" to acknowledge.\033[0m'
 		read L
 	fi
+}
+
+install_cert_linux() {
+	if [ -d "/usr/local/share/ca-certificates" ]; then
+		local dest="/usr/local/share/ca-certificates/twitch-developer-rig"
+		touch /etc/hosts 2> /dev/null || echo "Please enter your password to install the Twitch Developer Rig certificate."
+
+		if [ ! -d "${dest}" ]; then
+			sudo mkdir -p "${dest}"
+		fi
+
+		for name in server selfsigned; do
+			echo "$name.crt"
+			sudo cp "${name}.crt" "${dest}/{$name}.crt"
+			check "add the $name certificate to the local machine's root certificate store"
+		done
+		sudo update-ca-certificates
+	else
+		echo -e '\033[1;35mNOTE:\033[0;35m  Unable to determine certificate destination on your machine.'
+		echo -e '\033[1;35mNOTE:\033[0;35m  Please manually install ssl/server.crt and ssl/selfsigned.crt to the global trust.'
+	fi
+
+	echo -e '\033[1;35mNOTE:\033[0;35m  If you are using Firefox, you may have to manually add certs to avoid trust errors.'
+}
+
+# Add all certificates to the local machine's root certificate store.
+if $NEEDS_INSTALLATION; then
+	case "${PLATFORM}" in
+		"Darwin")
+			install_cert_darwin
+			;;
+		"Linux")
+			install_cert_linux
+			;;
+	esac
 fi

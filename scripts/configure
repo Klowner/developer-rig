@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Check the platform.
-if [ "$(uname)" != "Darwin" ]; then
-	echo "This script is for Mac only."
+if [ "$(uname)" != "Darwin" ] && [ "$(uname)" != "Linux" ]; then
+	echo "This script is for Mac & Linux only."
 	exit 1
 fi
 
