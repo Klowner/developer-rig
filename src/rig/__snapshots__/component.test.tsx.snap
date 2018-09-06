@@ -6,6 +6,15 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <RigComponent
     saveManifest={[Function]}
+    session={
+        Object {
+            "authToken": "test",
+            "displayName": "test",
+            "id": "test",
+            "login": "test",
+            "profileImageUrl": "test.png",
+          }
+    }
     userLogin={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -35,7 +44,6 @@ ShallowWrapper {
                     openEditViewHandler={[Function]}
                     openExtensionViewHandler={[Function]}
           />
-          <SignInDialog />
           <Console />
 </div>,
       ],
@@ -73,7 +81,7 @@ ShallowWrapper {
             false,
             false,
             false,
-            <SignInDialog />,
+            false,
             <Console />,
           ],
         },
@@ -96,15 +104,7 @@ ShallowWrapper {
           false,
           false,
           false,
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {},
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
+          false,
           Object {
             "instance": null,
             "key": undefined,
@@ -141,7 +141,6 @@ ShallowWrapper {
                         openEditViewHandler={[Function]}
                         openExtensionViewHandler={[Function]}
             />
-            <SignInDialog />
             <Console />
 </div>,
         ],
@@ -179,7 +178,7 @@ ShallowWrapper {
               false,
               false,
               false,
-              <SignInDialog />,
+              false,
               <Console />,
             ],
           },
@@ -202,15 +201,7 @@ ShallowWrapper {
             false,
             false,
             false,
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {},
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
+            false,
             Object {
               "instance": null,
               "key": undefined,
@@ -243,6 +234,15 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <RigComponent
     saveManifest={[Function]}
+    session={
+        Object {
+            "authToken": "test",
+            "displayName": "test",
+            "id": "test",
+            "login": "test",
+            "profileImageUrl": "test.png",
+          }
+    }
     userLogin={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -271,6 +271,7 @@ ShallowWrapper {
                     extensionViews={
                               Array [
                                         Object {
+                                          "channelId": "twitch",
                                           "extension": Object {
                                             "authorName": "test",
                                             "bitsEnabled": false,
@@ -323,7 +324,11 @@ ShallowWrapper {
                                               "bar",
                                             ],
                                           },
+                                          "features": Object {
+                                            "isChatEnabled": true,
+                                          },
                                           "id": "1",
+                                          "isPopout": false,
                                           "linked": false,
                                           "mode": "viewer",
                                           "orientation": "Portrait",
@@ -337,7 +342,6 @@ ShallowWrapper {
                     openEditViewHandler={[Function]}
                     openExtensionViewHandler={[Function]}
           />
-          <SignInDialog />
           <Console />
 </div>,
       ],
@@ -371,6 +375,7 @@ ShallowWrapper {
               extensionViews={
                             Array [
                                           Object {
+                                            "channelId": "twitch",
                                             "extension": Object {
                                               "authorName": "test",
                                               "bitsEnabled": false,
@@ -423,7 +428,11 @@ ShallowWrapper {
                                                 "bar",
                                               ],
                                             },
+                                            "features": Object {
+                                              "isChatEnabled": true,
+                                            },
                                             "id": "1",
+                                            "isPopout": false,
                                             "linked": false,
                                             "mode": "viewer",
                                             "orientation": "Portrait",
@@ -440,7 +449,7 @@ ShallowWrapper {
             false,
             false,
             false,
-            <SignInDialog />,
+            false,
             <Console />,
           ],
         },
@@ -454,6 +463,7 @@ ShallowWrapper {
               "deleteExtensionViewHandler": [Function],
               "extensionViews": Array [
                 Object {
+                  "channelId": "twitch",
                   "extension": Object {
                     "authorName": "test",
                     "bitsEnabled": false,
@@ -506,7 +516,11 @@ ShallowWrapper {
                       "bar",
                     ],
                   },
+                  "features": Object {
+                    "isChatEnabled": true,
+                  },
                   "id": "1",
+                  "isPopout": false,
                   "linked": false,
                   "mode": "viewer",
                   "orientation": "Portrait",
@@ -526,15 +540,7 @@ ShallowWrapper {
           false,
           false,
           false,
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {},
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
+          false,
           Object {
             "instance": null,
             "key": undefined,
@@ -570,6 +576,7 @@ ShallowWrapper {
                         extensionViews={
                                     Array [
                                                 Object {
+                                                  "channelId": "twitch",
                                                   "extension": Object {
                                                     "authorName": "test",
                                                     "bitsEnabled": false,
@@ -622,7 +629,11 @@ ShallowWrapper {
                                                       "bar",
                                                     ],
                                                   },
+                                                  "features": Object {
+                                                    "isChatEnabled": true,
+                                                  },
                                                   "id": "1",
+                                                  "isPopout": false,
                                                   "linked": false,
                                                   "mode": "viewer",
                                                   "orientation": "Portrait",
@@ -636,7 +647,6 @@ ShallowWrapper {
                         openEditViewHandler={[Function]}
                         openExtensionViewHandler={[Function]}
             />
-            <SignInDialog />
             <Console />
 </div>,
         ],
@@ -670,6 +680,7 @@ ShallowWrapper {
                 extensionViews={
                                 Array [
                                                 Object {
+                                                  "channelId": "twitch",
                                                   "extension": Object {
                                                     "authorName": "test",
                                                     "bitsEnabled": false,
@@ -722,7 +733,11 @@ ShallowWrapper {
                                                       "bar",
                                                     ],
                                                   },
+                                                  "features": Object {
+                                                    "isChatEnabled": true,
+                                                  },
                                                   "id": "1",
+                                                  "isPopout": false,
                                                   "linked": false,
                                                   "mode": "viewer",
                                                   "orientation": "Portrait",
@@ -739,7 +754,7 @@ ShallowWrapper {
               false,
               false,
               false,
-              <SignInDialog />,
+              false,
               <Console />,
             ],
           },
@@ -753,6 +768,7 @@ ShallowWrapper {
                 "deleteExtensionViewHandler": [Function],
                 "extensionViews": Array [
                   Object {
+                    "channelId": "twitch",
                     "extension": Object {
                       "authorName": "test",
                       "bitsEnabled": false,
@@ -805,7 +821,11 @@ ShallowWrapper {
                         "bar",
                       ],
                     },
+                    "features": Object {
+                      "isChatEnabled": true,
+                    },
                     "id": "1",
+                    "isPopout": false,
                     "linked": false,
                     "mode": "viewer",
                     "orientation": "Portrait",
@@ -825,15 +845,7 @@ ShallowWrapper {
             false,
             false,
             false,
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {},
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
+            false,
             Object {
               "instance": null,
               "key": undefined,

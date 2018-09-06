@@ -94,7 +94,7 @@ export const createExtensionForTest = (): ExtensionCoordinator.ExtensionObject =
   whitelistedPanelUrls: ['bar'],
 });
 
-export function createViewsForTest(numOfViews: number, type: string, role: string, extras?: any): Partial<RigExtensionView>[] {
+export function createViewsForTest(numOfViews: number, type: string, role: string, extras?: any): RigExtensionView[] {
   let ex = {
     x: 0,
     y: 0,
@@ -108,6 +108,7 @@ export function createViewsForTest(numOfViews: number, type: string, role: strin
 
   for (let i = 0; i < numOfViews; i++) {
     extViews.push({
+      channelId: 'twitch',
       id: (extViews.length + 1).toString(),
       type: type,
       mode: 'viewer',
@@ -116,7 +117,11 @@ export function createViewsForTest(numOfViews: number, type: string, role: strin
       role: role,
       x: ex.x,
       y: ex.y,
+      isPopout: false,
       orientation: ex.orientation,
+      features: {
+        isChatEnabled: true,
+      }
     })
   }
 

@@ -3,7 +3,7 @@ import { createExtensionForTest, createViewsForTest } from '../tests/constants/e
 import { ExtensionViewContainer } from './component';
 import { ExtensionAnchors } from '../constants/extension-types';
 import { ViewerTypes } from '../constants/viewer-types';
-import { ExtensionMode, ExtensionAnchor} from '../constants/extension-coordinator';
+import { ExtensionMode, ExtensionAnchor } from '../constants/extension-coordinator';
 
 const setupShallow = setupShallowTest(ExtensionViewContainer, () => ({
   mode: ExtensionMode.Viewer,
@@ -19,7 +19,7 @@ describe('<ExtensionViewContainer />', () => {
     const { wrapper } = setupShallow();
     wrapper.find('ExtensionViewButton').simulate('click');
     expect(wrapper.instance().props.openExtensionViewHandler).toHaveBeenCalled();
-   });
+  });
 
   describe('when in viewer mode', () => {
     it('renders correctly', () => {

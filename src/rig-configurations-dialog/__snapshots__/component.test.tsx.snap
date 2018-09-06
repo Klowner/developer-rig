@@ -6,7 +6,50 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <RigConfigurationsDialog
     closeConfigurationsHandler={[Function]}
-    config={Object {}}
+    config={
+        Object {
+            "authorName": "test",
+            "bitsEnabled": true,
+            "description": "test",
+            "iconUrls": Object {
+              "100x100": "test",
+            },
+            "id": "test",
+            "name": "test",
+            "requestIdentityLink": false,
+            "sku": "test",
+            "state": "test",
+            "summary": "test",
+            "vendorCode": "test",
+            "version": "0.0.1",
+            "views": Object {
+              "component": Object {
+                "aspectHeight": 3000,
+                "aspectWidth": 2500,
+                "canLinkExternalContent": false,
+                "size": 1024,
+                "viewerUrl": "test",
+                "zoom": false,
+                "zoomPixels": 24,
+              },
+              "config": Object {
+                "canLinkExternalContent": false,
+                "viewerUrl": "test",
+              },
+              "liveConfig": Object {
+                "canLinkExternalContent": false,
+                "viewerUrl": "test",
+              },
+              "panel": Object {
+                "canLinkExternalContent": false,
+                "height": 300,
+                "viewerUrl": "test",
+              },
+            },
+            "whitelistedConfigUrls": Array [],
+            "whitelistedPanelUrls": Array [],
+          }
+    }
     refreshConfigurationsHandler={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -53,7 +96,48 @@ ShallowWrapper {
                     className="rig-configurations-view__content"
           >
                      
-                    {}
+                    {
+                      "authorName": "test",
+                      "bitsEnabled": true,
+                      "description": "test",
+                      "iconUrls": {
+                        "100x100": "test"
+                      },
+                      "id": "test",
+                      "name": "test",
+                      "requestIdentityLink": false,
+                      "sku": "test",
+                      "state": "test",
+                      "summary": "test",
+                      "vendorCode": "test",
+                      "version": "0.0.1",
+                      "views": {
+                        "panel": {
+                          "canLinkExternalContent": false,
+                          "height": 300,
+                          "viewerUrl": "test"
+                        },
+                        "config": {
+                          "canLinkExternalContent": false,
+                          "viewerUrl": "test"
+                        },
+                        "liveConfig": {
+                          "canLinkExternalContent": false,
+                          "viewerUrl": "test"
+                        },
+                        "component": {
+                          "aspectHeight": 3000,
+                          "aspectWidth": 2500,
+                          "canLinkExternalContent": false,
+                          "viewerUrl": "test",
+                          "size": 1024,
+                          "zoom": false,
+                          "zoomPixels": 24
+                        }
+                      },
+                      "whitelistedConfigUrls": [],
+                      "whitelistedPanelUrls": []
+                    }
                      
           </div>
           <hr
@@ -123,7 +207,48 @@ ShallowWrapper {
               className="rig-configurations-view__content"
 >
                
-              {}
+              {
+                "authorName": "test",
+                "bitsEnabled": true,
+                "description": "test",
+                "iconUrls": {
+                  "100x100": "test"
+                },
+                "id": "test",
+                "name": "test",
+                "requestIdentityLink": false,
+                "sku": "test",
+                "state": "test",
+                "summary": "test",
+                "vendorCode": "test",
+                "version": "0.0.1",
+                "views": {
+                  "panel": {
+                    "canLinkExternalContent": false,
+                    "height": 300,
+                    "viewerUrl": "test"
+                  },
+                  "config": {
+                    "canLinkExternalContent": false,
+                    "viewerUrl": "test"
+                  },
+                  "liveConfig": {
+                    "canLinkExternalContent": false,
+                    "viewerUrl": "test"
+                  },
+                  "component": {
+                    "aspectHeight": 3000,
+                    "aspectWidth": 2500,
+                    "canLinkExternalContent": false,
+                    "viewerUrl": "test",
+                    "size": 1024,
+                    "zoom": false,
+                    "zoomPixels": 24
+                  }
+                },
+                "whitelistedConfigUrls": [],
+                "whitelistedPanelUrls": []
+              }
                
 </div>,
             <hr
@@ -235,7 +360,48 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 " ",
-                "{}",
+                "{
+  \\"authorName\\": \\"test\\",
+  \\"bitsEnabled\\": true,
+  \\"description\\": \\"test\\",
+  \\"iconUrls\\": {
+    \\"100x100\\": \\"test\\"
+  },
+  \\"id\\": \\"test\\",
+  \\"name\\": \\"test\\",
+  \\"requestIdentityLink\\": false,
+  \\"sku\\": \\"test\\",
+  \\"state\\": \\"test\\",
+  \\"summary\\": \\"test\\",
+  \\"vendorCode\\": \\"test\\",
+  \\"version\\": \\"0.0.1\\",
+  \\"views\\": {
+    \\"panel\\": {
+      \\"canLinkExternalContent\\": false,
+      \\"height\\": 300,
+      \\"viewerUrl\\": \\"test\\"
+    },
+    \\"config\\": {
+      \\"canLinkExternalContent\\": false,
+      \\"viewerUrl\\": \\"test\\"
+    },
+    \\"liveConfig\\": {
+      \\"canLinkExternalContent\\": false,
+      \\"viewerUrl\\": \\"test\\"
+    },
+    \\"component\\": {
+      \\"aspectHeight\\": 3000,
+      \\"aspectWidth\\": 2500,
+      \\"canLinkExternalContent\\": false,
+      \\"viewerUrl\\": \\"test\\",
+      \\"size\\": 1024,
+      \\"zoom\\": false,
+      \\"zoomPixels\\": 24
+    }
+  },
+  \\"whitelistedConfigUrls\\": [],
+  \\"whitelistedPanelUrls\\": []
+}",
                 " ",
               ],
               "className": "rig-configurations-view__content",
@@ -243,7 +409,48 @@ ShallowWrapper {
             "ref": null,
             "rendered": Array [
               " ",
-              "{}",
+              "{
+  \\"authorName\\": \\"test\\",
+  \\"bitsEnabled\\": true,
+  \\"description\\": \\"test\\",
+  \\"iconUrls\\": {
+    \\"100x100\\": \\"test\\"
+  },
+  \\"id\\": \\"test\\",
+  \\"name\\": \\"test\\",
+  \\"requestIdentityLink\\": false,
+  \\"sku\\": \\"test\\",
+  \\"state\\": \\"test\\",
+  \\"summary\\": \\"test\\",
+  \\"vendorCode\\": \\"test\\",
+  \\"version\\": \\"0.0.1\\",
+  \\"views\\": {
+    \\"panel\\": {
+      \\"canLinkExternalContent\\": false,
+      \\"height\\": 300,
+      \\"viewerUrl\\": \\"test\\"
+    },
+    \\"config\\": {
+      \\"canLinkExternalContent\\": false,
+      \\"viewerUrl\\": \\"test\\"
+    },
+    \\"liveConfig\\": {
+      \\"canLinkExternalContent\\": false,
+      \\"viewerUrl\\": \\"test\\"
+    },
+    \\"component\\": {
+      \\"aspectHeight\\": 3000,
+      \\"aspectWidth\\": 2500,
+      \\"canLinkExternalContent\\": false,
+      \\"viewerUrl\\": \\"test\\",
+      \\"size\\": 1024,
+      \\"zoom\\": false,
+      \\"zoomPixels\\": 24
+    }
+  },
+  \\"whitelistedConfigUrls\\": [],
+  \\"whitelistedPanelUrls\\": []
+}",
               " ",
             ],
             "type": "div",
@@ -355,7 +562,48 @@ ShallowWrapper {
                         className="rig-configurations-view__content"
             >
                          
-                        {}
+                        {
+                          "authorName": "test",
+                          "bitsEnabled": true,
+                          "description": "test",
+                          "iconUrls": {
+                            "100x100": "test"
+                          },
+                          "id": "test",
+                          "name": "test",
+                          "requestIdentityLink": false,
+                          "sku": "test",
+                          "state": "test",
+                          "summary": "test",
+                          "vendorCode": "test",
+                          "version": "0.0.1",
+                          "views": {
+                            "panel": {
+                              "canLinkExternalContent": false,
+                              "height": 300,
+                              "viewerUrl": "test"
+                            },
+                            "config": {
+                              "canLinkExternalContent": false,
+                              "viewerUrl": "test"
+                            },
+                            "liveConfig": {
+                              "canLinkExternalContent": false,
+                              "viewerUrl": "test"
+                            },
+                            "component": {
+                              "aspectHeight": 3000,
+                              "aspectWidth": 2500,
+                              "canLinkExternalContent": false,
+                              "viewerUrl": "test",
+                              "size": 1024,
+                              "zoom": false,
+                              "zoomPixels": 24
+                            }
+                          },
+                          "whitelistedConfigUrls": [],
+                          "whitelistedPanelUrls": []
+                        }
                          
             </div>
             <hr
@@ -425,7 +673,48 @@ ShallowWrapper {
                 className="rig-configurations-view__content"
 >
                  
-                {}
+                {
+                  "authorName": "test",
+                  "bitsEnabled": true,
+                  "description": "test",
+                  "iconUrls": {
+                    "100x100": "test"
+                  },
+                  "id": "test",
+                  "name": "test",
+                  "requestIdentityLink": false,
+                  "sku": "test",
+                  "state": "test",
+                  "summary": "test",
+                  "vendorCode": "test",
+                  "version": "0.0.1",
+                  "views": {
+                    "panel": {
+                      "canLinkExternalContent": false,
+                      "height": 300,
+                      "viewerUrl": "test"
+                    },
+                    "config": {
+                      "canLinkExternalContent": false,
+                      "viewerUrl": "test"
+                    },
+                    "liveConfig": {
+                      "canLinkExternalContent": false,
+                      "viewerUrl": "test"
+                    },
+                    "component": {
+                      "aspectHeight": 3000,
+                      "aspectWidth": 2500,
+                      "canLinkExternalContent": false,
+                      "viewerUrl": "test",
+                      "size": 1024,
+                      "zoom": false,
+                      "zoomPixels": 24
+                    }
+                  },
+                  "whitelistedConfigUrls": [],
+                  "whitelistedPanelUrls": []
+                }
                  
 </div>,
               <hr
@@ -537,7 +826,48 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   " ",
-                  "{}",
+                  "{
+  \\"authorName\\": \\"test\\",
+  \\"bitsEnabled\\": true,
+  \\"description\\": \\"test\\",
+  \\"iconUrls\\": {
+    \\"100x100\\": \\"test\\"
+  },
+  \\"id\\": \\"test\\",
+  \\"name\\": \\"test\\",
+  \\"requestIdentityLink\\": false,
+  \\"sku\\": \\"test\\",
+  \\"state\\": \\"test\\",
+  \\"summary\\": \\"test\\",
+  \\"vendorCode\\": \\"test\\",
+  \\"version\\": \\"0.0.1\\",
+  \\"views\\": {
+    \\"panel\\": {
+      \\"canLinkExternalContent\\": false,
+      \\"height\\": 300,
+      \\"viewerUrl\\": \\"test\\"
+    },
+    \\"config\\": {
+      \\"canLinkExternalContent\\": false,
+      \\"viewerUrl\\": \\"test\\"
+    },
+    \\"liveConfig\\": {
+      \\"canLinkExternalContent\\": false,
+      \\"viewerUrl\\": \\"test\\"
+    },
+    \\"component\\": {
+      \\"aspectHeight\\": 3000,
+      \\"aspectWidth\\": 2500,
+      \\"canLinkExternalContent\\": false,
+      \\"viewerUrl\\": \\"test\\",
+      \\"size\\": 1024,
+      \\"zoom\\": false,
+      \\"zoomPixels\\": 24
+    }
+  },
+  \\"whitelistedConfigUrls\\": [],
+  \\"whitelistedPanelUrls\\": []
+}",
                   " ",
                 ],
                 "className": "rig-configurations-view__content",
@@ -545,7 +875,48 @@ ShallowWrapper {
               "ref": null,
               "rendered": Array [
                 " ",
-                "{}",
+                "{
+  \\"authorName\\": \\"test\\",
+  \\"bitsEnabled\\": true,
+  \\"description\\": \\"test\\",
+  \\"iconUrls\\": {
+    \\"100x100\\": \\"test\\"
+  },
+  \\"id\\": \\"test\\",
+  \\"name\\": \\"test\\",
+  \\"requestIdentityLink\\": false,
+  \\"sku\\": \\"test\\",
+  \\"state\\": \\"test\\",
+  \\"summary\\": \\"test\\",
+  \\"vendorCode\\": \\"test\\",
+  \\"version\\": \\"0.0.1\\",
+  \\"views\\": {
+    \\"panel\\": {
+      \\"canLinkExternalContent\\": false,
+      \\"height\\": 300,
+      \\"viewerUrl\\": \\"test\\"
+    },
+    \\"config\\": {
+      \\"canLinkExternalContent\\": false,
+      \\"viewerUrl\\": \\"test\\"
+    },
+    \\"liveConfig\\": {
+      \\"canLinkExternalContent\\": false,
+      \\"viewerUrl\\": \\"test\\"
+    },
+    \\"component\\": {
+      \\"aspectHeight\\": 3000,
+      \\"aspectWidth\\": 2500,
+      \\"canLinkExternalContent\\": false,
+      \\"viewerUrl\\": \\"test\\",
+      \\"size\\": 1024,
+      \\"zoom\\": false,
+      \\"zoomPixels\\": 24
+    }
+  },
+  \\"whitelistedConfigUrls\\": [],
+  \\"whitelistedPanelUrls\\": []
+}",
                 " ",
               ],
               "type": "div",

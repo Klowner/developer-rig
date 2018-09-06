@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { mount } from 'enzyme';
-
+import { mount, MountRendererProps } from 'enzyme';
 
 /**
  * Builds the mount wrapper for a component given defaults set in a test suite, and allowing overrides for each case.
@@ -8,8 +7,8 @@ import { mount } from 'enzyme';
  * @param {*} generator
  * @param {*} mountOptions
  */
-export function setupMountTest(Component: React.ComponentClass, generator: Function, mountOptions?: Object) {
-  return (propOverrides?: any) => {
+export function setupMountTest<Props>(Component: React.ComponentClass<Props>, generator: () => Props, mountOptions?: MountRendererProps) {
+  return (propOverrides?: Partial<Props>) => {
     const combinedProps = Object.assign({}, generator(), propOverrides);
     return {
       props: combinedProps,

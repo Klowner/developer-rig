@@ -10,8 +10,10 @@ export interface PublicProps {
   className: string;
   frameId: string;
   extension: ExtensionCoordinator.ExtensionObject;
+  installationAbilities: ExtensionCoordinator.ExtensionInstallationAbilities;
   type: string;
   mode: string;
+  isPopout: boolean;
   bindIframeToParent: (iframe: HTMLIFrameElement) => void;
 }
 
@@ -49,14 +51,13 @@ export class ExtensionFrame extends React.Component<Props> {
       channelId: parseInt(this.props.channelId, 10),
       extension: this.props.extension,
       iframeClassName: IFRAME_CLASS,
-      installationAbilities: {
-        isChatEnabled: true,
-      },
+      installationAbilities: this.props.installationAbilities,
       loginId: null,
       mode: this.props.mode as ExtensionCoordinator.ExtensionMode,
       platform: (this.props.type === ExtensionViewType.Mobile) ? ExtensionPlatform.Mobile : ExtensionPlatform.Web,
       trackingProperties: {},
-    }
+      isPopout: this.props.isPopout,
+    };
 
     const data = {
       action: EXTENSION_FRAME_INIT_ACTION,

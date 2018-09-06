@@ -24,7 +24,7 @@ import { RigRole } from '../constants/rig';
 
 enum LocalStorageKeys {
   RigExtensionViews = 'extensionViews',
-  RigLogin = 'login',
+  RigLogin = 'rigLogin',
 }
 
 export interface ReduxStateProps {
@@ -168,6 +168,9 @@ export class RigComponent extends React.Component<Props, State> {
       id: nextExtensionViewId.toString(),
       channelId: extensionViewDialogState.channelId,
       type: extensionViewDialogState.extensionViewType,
+      features: {
+        isChatEnabled: extensionViewDialogState.isChatEnabled,
+      },
       extension: createExtensionObject(
         this.state.manifest,
         nextExtensionViewId.toString(),
@@ -180,6 +183,7 @@ export class RigComponent extends React.Component<Props, State> {
       ),
       linked,
       mode,
+      isPopout: extensionViewDialogState.isPopout,
       role: extensionViewDialogState.viewerType,
       x: extensionViewDialogState.x,
       y: extensionViewDialogState.y,
@@ -221,42 +225,42 @@ export class RigComponent extends React.Component<Props, State> {
         ) : this.state.selectedView === NavItem.ProductManagement ? (
           <ProductManagementViewContainer clientId={this.state.clientId} />
         ) : (
-          <div>
-            <ExtensionViewContainer
-              deleteExtensionViewHandler={this.deleteExtensionView}
-              extensionViews={this.state.extensionViews}
-              openEditViewHandler={this.openEditViewHandler}
-              openExtensionViewHandler={this.openExtensionViewHandler}
-            />
-            {this.state.showExtensionsView && (
-              <ExtensionViewDialog
-                channelId={this.state.channelId}
-                extensionViews={this.state.manifest.views}
-                show={this.state.showExtensionsView}
-                closeHandler={this.closeExtensionViewDialog}
-                saveHandler={this.createExtensionView}
-              />
+              <div>
+                <ExtensionViewContainer
+                  deleteExtensionViewHandler={this.deleteExtensionView}
+                  extensionViews={this.state.extensionViews}
+                  openEditViewHandler={this.openEditViewHandler}
+                  openExtensionViewHandler={this.openExtensionViewHandler}
+                />
+                {this.state.showExtensionsView && (
+                  <ExtensionViewDialog
+                    channelId={this.state.channelId}
+                    extensionViews={this.state.manifest.views}
+                    show={this.state.showExtensionsView}
+                    closeHandler={this.closeExtensionViewDialog}
+                    saveHandler={this.createExtensionView}
+                  />
+                )}
+                {this.state.showEditView && (
+                  <EditViewDialog
+                    idToEdit={this.state.idToEdit}
+                    show={this.state.showEditView}
+                    views={this.getStoredRigExtensionViews()}
+                    closeHandler={this.closeEditViewHandler}
+                    saveViewHandler={this.editViewHandler}
+                  />
+                )}
+                {this.state.showConfigurations && (
+                  <RigConfigurationsDialog
+                    config={this.state.manifest}
+                    closeConfigurationsHandler={this.closeConfigurationsHandler}
+                    refreshConfigurationsHandler={this.fetchInitialConfiguration}
+                  />
+                )}
+                {!this.props.session && <SignInDialog />}
+                <Console />
+              </div>
             )}
-            {this.state.showEditView && (
-              <EditViewDialog
-                idToEdit={this.state.idToEdit}
-                show={this.state.showEditView}
-                views={this.getStoredRigExtensionViews()}
-                closeHandler={this.closeEditViewHandler}
-                saveViewHandler={this.editViewHandler}
-              />
-            )}
-            {this.state.showConfigurations && (
-              <RigConfigurationsDialog
-                config={this.state.manifest}
-                closeConfigurationsHandler={this.closeConfigurationsHandler}
-                refreshConfigurationsHandler={this.fetchInitialConfiguration}
-              />
-            )}
-            {!this.props.session && <SignInDialog />}
-            <Console />
-          </div>
-        )}
       </div>
     );
   }
@@ -308,7 +312,6 @@ export class RigComponent extends React.Component<Props, State> {
 
   private async setLogin() {
     const windowHash = window.location.hash;
-    const rigLogin = localStorage.getItem(LocalStorageKeys.RigLogin);
     if (windowHash.includes('access_token')) {
       const accessTokenKey = 'access_token=';
       const accessTokenIndex = windowHash.indexOf(accessTokenKey);
@@ -316,7 +319,7 @@ export class RigComponent extends React.Component<Props, State> {
       const accessToken = windowHash.substring(accessTokenIndex + accessTokenKey.length, ampersandIndex);
 
       try {
-        const response = await fetchUserInfo(accessToken)
+        const response = await fetchUserInfo(accessToken);
         const userSession = {
           authToken: accessToken,
           displayName: response.display_name,
@@ -331,9 +334,20 @@ export class RigComponent extends React.Component<Props, State> {
       } catch (error) {
         this.setState({ error });
       }
-    } else if (rigLogin) {
-      const userSession = JSON.parse(rigLogin) as UserSession;
-      this.props.userLogin(userSession);
+    } else {
+      const rigLogin = localStorage.getItem(LocalStorageKeys.RigLogin);
+      if (rigLogin) {
+        try {
+          const userSession = JSON.parse(rigLogin) as UserSession;
+          if (userSession && userSession.authToken && userSession.id && userSession.login && userSession.profileImageUrl) {
+            this.props.userLogin(userSession);
+          } else {
+            localStorage.removeItem(LocalStorageKeys.RigLogin);
+          }
+        } catch (ex) {
+          localStorage.removeItem(LocalStorageKeys.RigLogin);
+        }
+      }
     }
   }
 

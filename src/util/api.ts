@@ -60,18 +60,19 @@ export async function fetchUserByName(clientId: string, username: string) {
 }
 
 export async function fetchUserInfo(accessToken: string) {
-  const response = await TwitchAPI.getOrThrow<UsersResponse>('/helix/users', {
+  const api = 'https://api.twitch.tv/helix/users';
+  return fetch(api, {
+    method: 'GET',
     headers: {
       Authorization: `Bearer ${accessToken}`,
     }
+  }).then(response => response.json()).then(respJson => {
+    const data = respJson.data;
+    if (!data && !data.length) {
+      return Promise.reject(`Unable to get user data for token: ${accessToken}`);
+    }
+    return Promise.resolve(data[0]);
   });
-
-  const { data } = response.body;
-  if (!data && data.length === 0) {
-    return Promise.reject(`Unable to get user data for token: ${accessToken}`);
-  }
-
-  return Promise.resolve(data[0]);
 }
 
 export function fetchProducts(host: string, clientId: string, token: string) {

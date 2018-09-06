@@ -8,10 +8,14 @@ export interface RigExtensionView {
   id: string;
   channelId: string;
   extension: ExtensionCoordinator.ExtensionObject;
+  features: {
+    isChatEnabled: boolean;
+  };
   type: string;
   mode?: string;
   role: string;
   linked: boolean;
+  isPopout: boolean;
   deleteViewHandler?: (id: string) => void;
   openEditViewHandler?: (id: string) => void;
   frameSize?: FrameSize;

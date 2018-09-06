@@ -1,9 +1,10 @@
 import { setupShallowTest } from '../tests/enzyme-util/shallow';
 import { RigConfigurationsDialog } from './component';
+import { createExtensionManifestForTest } from '../tests/constants/extension';
 
 describe('<RigConfigurationsDialog />', () => {
   const setupShallow = setupShallowTest(RigConfigurationsDialog, () => ({
-    config: {},
+    config: createExtensionManifestForTest(),
     closeConfigurationsHandler: jest.fn(),
     refreshConfigurationsHandler: jest.fn()
   }));
@@ -14,14 +15,14 @@ describe('<RigConfigurationsDialog />', () => {
   });
 
   it('expect no config', () => {
-    const { wrapper } = setupShallow();
-    expect(wrapper.find('.rig-configurations-view__content').text().trim()).toBe('{}');
+    const { wrapper } = setupShallow({
+      config: undefined,
+    });
+    expect(wrapper.find('.rig-configurations-view__content').text().trim()).toBe('');
   });
 
   it('should have some configurations', () => {
-    const testConfig = {
-      test: 'config'
-    }
+    const testConfig = createExtensionManifestForTest();
     const { wrapper } = setupShallow({
       config: testConfig
     });

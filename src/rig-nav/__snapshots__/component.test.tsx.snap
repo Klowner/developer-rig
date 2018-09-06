@@ -52,12 +52,15 @@ ShallowWrapper {
             "whitelistedPanelUrls": Array [],
           }
     }
+    mockApiEnabled={false}
     openConfigurationsHandler={[Function]}
     openProductManagementHandler={[Function]}
     selectedView="Extension Views"
     session={
         Object {
             "authToken": "test",
+            "displayName": "test",
+            "id": "test",
             "login": "test",
             "profileImageUrl": "test.png",
           }
@@ -107,6 +110,8 @@ ShallowWrapper {
                               session={
                                         Object {
                                                   "authToken": "test",
+                                                  "displayName": "test",
+                                                  "id": "test",
                                                   "login": "test",
                                                   "profileImageUrl": "test.png",
                                                 }
@@ -168,6 +173,8 @@ ShallowWrapper {
                             session={
                                           Object {
                                                         "authToken": "test",
+                                                        "displayName": "test",
+                                                        "id": "test",
                                                         "login": "test",
                                                         "profileImageUrl": "test.png",
                                                       }
@@ -253,6 +260,8 @@ ShallowWrapper {
                 session={
                                 Object {
                                                 "authToken": "test",
+                                                "displayName": "test",
+                                                "id": "test",
                                                 "login": "test",
                                                 "profileImageUrl": "test.png",
                                               }
@@ -268,6 +277,8 @@ ShallowWrapper {
               "props": Object {
                 "session": Object {
                   "authToken": "test",
+                  "displayName": "test",
+                  "id": "test",
                   "login": "test",
                   "profileImageUrl": "test.png",
                 },
@@ -373,6 +384,8 @@ ShallowWrapper {
                                     session={
                                                 Object {
                                                             "authToken": "test",
+                                                            "displayName": "test",
+                                                            "id": "test",
                                                             "login": "test",
                                                             "profileImageUrl": "test.png",
                                                           }
@@ -434,6 +447,8 @@ ShallowWrapper {
                                 session={
                                                 Object {
                                                                 "authToken": "test",
+                                                                "displayName": "test",
+                                                                "id": "test",
                                                                 "login": "test",
                                                                 "profileImageUrl": "test.png",
                                                               }
@@ -519,6 +534,8 @@ ShallowWrapper {
                   session={
                                     Object {
                                                       "authToken": "test",
+                                                      "displayName": "test",
+                                                      "id": "test",
                                                       "login": "test",
                                                       "profileImageUrl": "test.png",
                                                     }
@@ -534,6 +551,8 @@ ShallowWrapper {
                 "props": Object {
                   "session": Object {
                     "authToken": "test",
+                    "displayName": "test",
+                    "id": "test",
                     "login": "test",
                     "profileImageUrl": "test.png",
                   },

@@ -12,6 +12,7 @@ import { ExtensionAnchor, ExtensionViewType } from '../constants/extension-coord
 let globalAny = global as any;
 
 const setupShallow = setupShallowTest(RigComponent, () => ({
+  session: { displayName: 'test', login: 'test', id: 'test', profileImageUrl: 'test.png', authToken: 'test' },
   saveManifest: jest.fn(),
   userLogin: jest.fn()
 }));

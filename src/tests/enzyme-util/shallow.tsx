@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, ShallowRendererProps } from 'enzyme';
 import { RigStore } from '../../core/rig-store';
 import { wrap } from '../../util/react';
 
@@ -10,8 +10,8 @@ import { wrap } from '../../util/react';
  * @param {*} generator
  * @param {*} shallowOptions
  */
-export function setupShallowTest(Component: React.ComponentClass, generator: Function, shallowOptions?: Object) {
-  return (propOverrides?: any) => {
+export function setupShallowTest<Props>(Component: React.ComponentClass<Props>, generator: () => Props, shallowOptions?: ShallowRendererProps) {
+  return (propOverrides?: Partial<Props>) => {
     const combinedProps = Object.assign({}, generator(), propOverrides);
     return {
       props: combinedProps,
@@ -20,9 +20,9 @@ export function setupShallowTest(Component: React.ComponentClass, generator: Fun
   }
 }
 
-export function setupShallowTestWithStore(Component: React.ComponentClass, generator: Function, shallowOptions?: Object) {
+export function setupShallowTestWithStore<Props>(Component: React.ComponentClass<Props>, generator: () => Props, shallowOptions?: ShallowRendererProps) {
   const store = new RigStore();
-  return (propOverrides?: any) => {
+  return (propOverrides?: Partial<Props>) => {
     const combinedProps = Object.assign({}, generator(), propOverrides);
     return {
       props: combinedProps,

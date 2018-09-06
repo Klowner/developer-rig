@@ -14,7 +14,8 @@ const defaultGenerator = () => ({
   selectedView: NavItem.ExtensionViews,
   error: '',
   manifest: createExtensionManifestForTest(),
-  session: { login: 'test', profileImageUrl: 'test.png', authToken: 'test' },
+  session: { displayName: 'test', login: 'test', id: 'test', profileImageUrl: 'test.png', authToken: 'test' },
+  mockApiEnabled: false,
 });
 
 const setupShallow = setupShallowTest(RigNavComponent, defaultGenerator);
@@ -63,9 +64,7 @@ describe('<RigNavComponent />', () => {
   });
 
   it('renders user dropdown if session exists', () => {
-    const { wrapper } = setupShallow({
-      session: { login: 'test', profileImageUrl: 'test.png', authToken: 'test' },
-    });
+    const { wrapper } = setupShallow();
     expect(wrapper.find(UserDropdown));
   });
 

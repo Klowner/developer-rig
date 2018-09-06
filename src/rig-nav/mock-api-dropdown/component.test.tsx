@@ -3,6 +3,7 @@ import { MockApiDropdownComponent } from './component';
 
 describe('<MockApiDropdownComponent />', () => {
   const setupShallow = setupShallowTest(MockApiDropdownComponent, () => ({
+    mockApiEnabled: false,
     toggleMockApi: jest.fn()
   }));
 

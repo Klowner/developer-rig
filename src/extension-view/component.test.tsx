@@ -3,23 +3,29 @@ import { ExtensionViewComponent } from './component';
 import { ViewerTypes } from '../constants/viewer-types';
 import { createExtensionForTest } from '../tests/constants/extension';
 import { MobileOrientation } from '../constants/mobile';
-import { ExtensionAnchor, ExtensionMode, ExtensionViewType, ExtensionPlatform} from '../constants/extension-coordinator';
+import { ExtensionAnchor, ExtensionMode, ExtensionViewType, ExtensionPlatform } from '../constants/extension-coordinator';
 
 const DeleteButtonSelector = '.view__close_button.visible';
 
 describe('<ExtensionViewComponent />', () => {
   const setupShallow = setupShallowTest(ExtensionViewComponent, () => ({
+    channelId: 'twitch',
     id: '0',
     extension: createExtensionForTest(),
     type: ExtensionAnchor.Panel,
     role: ViewerTypes.Broadcaster,
     mode: 'viewer',
     linked: false,
+    isPopout: false,
     position: { x: 0, y: 0 },
     frameSize: { width: 0, height: 0 },
     deleteViewHandler: jest.fn(),
     openEditViewHandler: jest.fn(),
     iframe: '',
+    mockApiEnabled: false,
+    installationAbilities: {
+      isChatEnabled: true,
+    }
   }));
 
   it('when moused over displays the delete button', () => {
@@ -104,18 +110,21 @@ describe('<ExtensionViewComponent />', () => {
     });
 
     it('sets correct panel height when panel height provided', () => {
-      const extensionWithPanelHeight = {
+      const extensionWithPanelHeight: ExtensionCoordinator.ExtensionObject = {
         ...createExtensionForTest(),
         views: {
           config: {
+            canLinkExternalContent: false,
             viewerUrl: "test",
           },
           liveConfig: {
+            canLinkExternalContent: false,
             viewerUrl: "test",
           },
           panel: {
+            canLinkExternalContent: false,
             viewerUrl: 'test',
-            height: '300px'
+            height: 300,
           }
         },
       };
@@ -156,8 +165,8 @@ describe('<ExtensionViewComponent />', () => {
       const { wrapper } = setupShallow({
         type: ExtensionAnchor.Overlay,
         frameSize: {
-          height: "1px",
-          width: "1px"
+          height: 1,
+          width: 1
         }
       });
       expect(wrapper).toMatchSnapshot();
@@ -168,8 +177,8 @@ describe('<ExtensionViewComponent />', () => {
         role: ViewerTypes.LoggedIn,
         linked: false,
         frameSize: {
-          height: "1px",
-          width: "1px"
+          height: 1,
+          width: 1
         }
       });
       expect(wrapper).toMatchSnapshot();
@@ -180,8 +189,8 @@ describe('<ExtensionViewComponent />', () => {
         role: ViewerTypes.LoggedIn,
         linked: true,
         frameSize: {
-          height: "1px",
-          width: "1px"
+          height: 1,
+          width: 1
         }
       });
       expect(wrapper).toMatchSnapshot();
@@ -191,8 +200,8 @@ describe('<ExtensionViewComponent />', () => {
       const { wrapper } = setupShallow({
         role: ViewerTypes.LoggedOut,
         frameSize: {
-          height: "1px",
-          width: "1px"
+          height: 1,
+          width: 1
         }
       });
       expect(wrapper).toMatchSnapshot();

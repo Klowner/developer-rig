@@ -5,6 +5,7 @@ import { MobileOrientation } from '../constants/mobile';
 import { ExtensionMode } from '../constants/extension-coordinator';
 
 const setupShallow = setupShallowTest(ExtensionMobileView, () => ({
+  channelId: 'twitch',
   id: '0',
   extension: createExtensionForTest(),
   orientation: MobileOrientation.Portrait,
@@ -12,6 +13,9 @@ const setupShallow = setupShallowTest(ExtensionMobileView, () => ({
   position: { x: 0, y: 0 },
   role: ExtensionMode.Viewer,
   bindIframeToParent: jest.fn(),
+  installationAbilities: {
+    isChatEnabled: true,
+  }
 }));
 
 describe('<ExtensionMobileView />', () => {
